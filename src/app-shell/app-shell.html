@@ -1,0 +1,27 @@
+<!-- IMPORTS -->
+<!-- POLYMER -->
+<link rel="import" href="../../bower_components/polymer/polymer.html">
+
+<dom-module id="app-shell">
+  <template>
+    <style>
+      :host {
+        display: block;
+      }
+    </style>
+
+    <h1>[[message]]</h1>
+
+  </template>
+  <script>
+    Polymer({
+      is: 'app-shell',
+      properties: {
+        message: {
+          type: String,
+          value: "Hello World!"
+        }
+      }
+    });
+  </script>
+</dom-module>

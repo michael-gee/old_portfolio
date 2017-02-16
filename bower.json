@@ -1,0 +1,16 @@
+{
+  "name": "Portfolio",
+  "authors": [
+    "Michael Gee"
+  ],
+  "license": "https://polymer.github.io/LICENSE.txt",
+  "dependencies": {
+    "polymer": "Polymer/polymer#^1.6.0",
+    "app-layout": "PolymerElements/app-layout#^0.10.7",
+    "app-route": "PolymerElements/app-route#^0.9.3"
+  },
+  "devDependencies": {
+    "web-component-tester": "^4.0.0"
+  },
+  "private": true
+}
