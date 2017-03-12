@@ -1,0 +1,29 @@
+<!-- IMPORTS -->
+<!-- POLYMER -->
+<link rel="import" href="../bower_components/polymer/polymer-element.html">
+<!-- CUSTOM ELEMENTS -->
+<link rel="import" href="ceg-shell/ceg-shell.html">
+<link rel="import" href="shared-styles.html">
+
+<dom-module id="ceg-app">
+  <template>
+    <style include="shared-styles">
+      :host {
+        display: block;
+
+        padding: 10px;
+      }
+    </style>
+
+    <ceg-shell></ceg-shell>
+
+  </template>
+
+  <script>
+    class CegmagApp extends Polymer.Element {
+      static get is() { return 'ceg-app'; }
+    }
+
+    window.customElements.define(CegmagApp.is, CegmagApp);
+  </script>
+</dom-module>

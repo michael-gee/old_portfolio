@@ -1,0 +1,28 @@
+<!-- IMPORTS -->
+<!-- POLYMER -->
+<link rel="import" href="../../bower_components/polymer/polymer-element.html">
+<!-- CUSTOM ELEMENTS -->
+<link rel="import" href="../shared-styles.html">
+
+<dom-module id="ceg-shell">
+  <template>
+    <style include="shared-styles">
+      :host {
+        display: block;
+
+        padding: 10px;
+      }
+    </style>
+
+    <h1>Hello World!</h1>
+
+  </template>
+
+  <script>
+    class CegmagShell extends Polymer.Element {
+      static get is() { return 'ceg-shell'; }
+    }
+
+    window.customElements.define(CegmagShell.is, CegmagShell);
+  </script>
+</dom-module>

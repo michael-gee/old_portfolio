@@ -1,16 +1,19 @@
 {
   "entrypoint": "index.html",
-  "shell": "src/mg-app.html",
+  "shell": "src/ceg-app.html",
   "fragments": [
-    
+    "src/ceg-pages/ceg-page.html"
   ],
-  "sourceGlobs": [
+  "sources": [
     "src/**/*",
     "images/**/*",
     "bower.json"
   ],
-  "includeDependencies": [
+  "extraDependencies": [
     "manifest.json",
-    "bower_components/webcomponentsjs/webcomponents-lite.min.js"
-  ]
+    "bower_components/webcomponentsjs/*.js"
+  ],
+  "lint": {
+    "rules": ["polymer-2"]
+  }
 }
