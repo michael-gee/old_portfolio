@@ -1,6 +1,9 @@
 <!-- IMPORTS -->
 <!-- POLYMER -->
 <link rel="import" href="../bower_components/polymer/polymer-element.html">
+<!-- PAPER ELEMENTS -->
+<link rel="import" href="../bower_components/paper-button/paper-button.html">
+<link rel="import" href="../bower_components/paper-dialog/paper-dialog.html">
 <!-- CUSTOM ELEMENTS -->
 <link rel="import" href="ceg-icons/ceg-icons.html">
 <link rel="import" href="ceg-styles.html">
@@ -28,21 +31,43 @@
             <div id="intro">
               <h1>Michael Gee</h1>
 
+              <img id="mobileview-pic" src="../../images/michael.jpg" alt="Michael Gee Portfolio Image">
+
               <p class="intro-content">Front End & Progressive Web App Developer</p>
-              <p class="intro-content" style="font-style:italic">My passion is creating fully functional, modern, and progressive web applications.</p>
+              <p id="intro-message" class="intro-content">My passion is creating fully functional, modern, and progressive web applications.</p>
 
               <div id="technologies">
                 <div class="tech-row">
-                  <img src="../../images/social/html.png" alt="HTML 5 Icon">
-                  <img src="../../images/social/css.png" alt="CSS 3 Icon">
-                  <img src="../../images/social/javascript.png" alt="JavaScript Icon">
+                  <img src="../images/social/html.png" alt="HTML 5 Icon">
+                  <img src="../images/social/css.png" alt="CSS 3 Icon">
+                  <img src="../images/social/javascript.png" alt="JavaScript Icon">
                 </div>
                 <div class="tech-row">
-                  <img src="../../images/social/node.png" alt="Node JS Icon">
-                  <img src="../../images/social/polymer.png" alt="Polymer Icon">
-                  <img src="../../images/social/firebase.svg" alt="Firebase Icon">
+                  <img src="../images/social/node.png" alt="Node JS Icon">
+                  <img src="../images/social/polymer.png" alt="Polymer Icon">
+                  <img src="../images/social/firebase.svg" alt="Firebase Icon">
                 </div>
               </div>
+
+              <!-- TECHNOLOGIES BUTTON ONLY SHOWN ON MOBILE -->
+              <paper-button id="my-stack" on-tap="openTechDialog" raised>
+                <iron-icon icon="ceg-icons:polymer"></iron-icon>
+                Technologies
+              </paper-button>
+                <paper-dialog id="techDialog" with-backdrop>
+                  <div class="tech-row">
+                    <img src="../images/social/html.png" alt="HTML 5 Icon">
+                    <img src="../images/social/css.png" alt="CSS 3 Icon">
+                  </div>
+                  <div class="tech-row">
+                    <img src="../images/social/javascript.png" alt="JavaScript Icon">
+                    <img src="../images/social/node.png" alt="Node JS Icon">
+                  </div>
+                  <div class="tech-row">
+                    <img src="../images/social/polymer.png" alt="Polymer Icon">
+                    <img src="../images/social/firebase.svg" alt="Firebase Icon">
+                  </div>
+                </paper-dialog>
 
               <p id="location" class="intro-content">
                 <iron-icon icon="ceg-icons:location-on"></iron-icon>
@@ -60,7 +85,6 @@
           <div id="bottom-arrow">
               <h3>View My Portfolio</h3>
               <iron-icon icon="ceg-icons:keyboard-arrow-down"></iron-icon>
-
           </div>
 
         </div><!-- JUMBOTRON CONTENT -->
@@ -73,6 +97,10 @@
   <script>
     class CegmagApp extends Polymer.Element {
       static get is() { return 'ceg-app'; }
+
+      openTechDialog() {
+        this.$['techDialog'].open();
+      }
     }
 
     window.customElements.define(CegmagApp.is, CegmagApp);

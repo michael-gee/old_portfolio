@@ -39,12 +39,11 @@
 
     /* JUMBOTRON SECTION */
     #jumbotron {
-      height: 100vh;
+      min-height: 100vh;
       display: flex;
       flex-direction: column;
       position: relative;
       width: 100%;
-      min-height: 350px;
       background-color: #2A3A3F;
       background-size: cover;
       background-position: center center;
@@ -58,9 +57,9 @@
     }
 
     #jumbo-content {
+      min-height: 100vh;
       display: flex;
       justify-content: center;
-      height: 100%;
       width: 100%;
     }
 
@@ -79,43 +78,55 @@
     #intro {
       color: white;
       padding: 15px;
-      background-color: rgba(0, 0, 0, .65);
+      background-color: rgba(0, 0, 0, .45);
       width: 80%;
       margin: 0 auto;
       border-radius: 5%;
     }
+      #mobileview-pic {
+        width: 150px;
+        border-radius: 50%;
+        display: none;
+      }
+      #intro-message {
+        font-style: italic;
+        margin-bottom: 25px;
+      }
       .intro-content {
         font-size: 2em;
         margin: 5px 0;
       }
       /* TECHNOLOGIES DIV */
       .tech-row {
-        width: 360px;
-        margin: 0 auto;
-        margin-top: 15px;
-        overflow: hidden;
+        max-width: 100%;
+        margin-bottom: 5px;
       }
         .tech-row img {
-          padding: 0 10px;
+          margin: 0 5px;
           width: 100px;
-          max-width: 100%;
-          float: left;
         }
-        #location {
-          padding-top: 20px;
-          clear: both;
-        }
-        #github {
-          display: inline-block;
-        }
-        #github-text {
-          float: left;
-          padding-top: 20px;
-        }
-        #github-image {
-          width: 75px;
-          float: left;
-        }
+      #my-stack{
+        font-size: 1.6em;
+        background-color: white;
+        color: black;
+        margin: 10px 0;
+        display: none;
+      }
+      #location {
+        padding-top: 15px;
+        clear: both;
+      }
+      #github {
+        display: inline-block;
+      }
+      #github-text {
+        float: left;
+        padding-top: 20px;
+      }
+      #github-image {
+        width: 75px;
+        float: left;
+      }
 
     #bottom-arrow {
       display: inline-block;
@@ -124,7 +135,6 @@
       cursor: pointer;
       text-align: center;
       bottom: 1.5%;
-      left: 45%;
       padding: 20px 0;
       position: absolute;
     }
@@ -133,6 +143,114 @@
       }
 
       /* MEDIA QUERIES */
+      @media screen and (max-width: 960px) {
+
+      }
+      /* TABLET */
+      @media screen and (max-width: 960px) {
+        #jumbo-content {
+          display: block;
+        }
+
+        #section1 {
+          display: none;
+        }
+
+        #section2 {
+          margin-top: 25px;
+          text-align: center;
+          width: 100%;
+        }
+
+        #mobileview-pic {
+          display: inline;
+        }
+
+        .tech-row img {
+          width: 75px;
+        }
+
+        #bottom-arrow {
+          width: 100%;
+          text-align: center;
+        }
+      }
+
+      /* PHONE */
+      @media screen and (max-width: 450px) {
+        #jumbotron {
+          background-image:
+          linear-gradient(
+                        rgba(0, 0, 0, .45),
+                        rgba(0, 0, 0, .45)
+                        ),
+          url('../../images/layout/mainbg.jpg');
+        }
+        #section2 {
+          margin: 0;
+        }
+        #intro {
+          padding: 0;
+          margin: 0;
+          width: 100%;
+          background-color: transparent;
+        }
+          #location {
+            padding: 0;
+          }
+          #intro-message {
+            margin-bottom: 5px;
+          }
+          #technologies {
+            display: none;
+          }
+            #my-stack {
+              display: inline-block;
+            }
+          #github-text{
+            float: none;
+            text-align: center;
+          }
+          #github-image {
+            display: none;
+          }
+        #bottom-arrow {
+          bottom: 0;
+          padding: 5px 0;
+        }
+      }
+
+      @media screen and (max-width: 350px) {
+        #github-text {
+          padding: 0;
+        }
+        .intro-content {
+          font-size: 1.8em;
+        }
+      }
+
+      /* PHONE IN LANDSCAPE MODE */
+      @media screen
+      and (max-width: 750px)
+      and (orientation: landscape) {
+        #jumbotron {
+          background-image:
+          linear-gradient(
+                        rgba(0, 0, 0, .45),
+                        rgba(0, 0, 0, .45)
+                        ),
+          url('../../images/layout/mainbg.jpg');
+        }
+        #intro {
+          padding: 0;
+          margin: 0;
+          width: 100%;
+          background-color: transparent;
+        }
+        #bottom-arrow {
+          display: none;
+        }
+      }
 
     </style>
   </template>
