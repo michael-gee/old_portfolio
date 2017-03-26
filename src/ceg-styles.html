@@ -1,0 +1,139 @@
+<link rel="import" href="../bower_components/polymer/polymer-element.html">
+
+<!-- shared styles for all views -->
+<dom-module id="ceg-styles">
+  <template>
+    <style>
+
+    /* HEADINGS */
+    h1, h2, h3, h4, h5, h6 {
+      margin: 0;
+    }
+
+    h1 {
+      font-size: 3.2em;
+    }
+
+    p {
+      margin: 0;
+      font-size: 1.6em;
+    }
+
+    /* IMAGES */
+    img {
+      max-width: 100%;
+    }
+
+    a {
+      color: white;
+      text-decoration: underline;
+    }
+      a:hover {
+        color: red;
+        text-decoration: underline;
+      }
+
+    #container {
+      width: 100%;
+    }
+
+    /* JUMBOTRON SECTION */
+    #jumbotron {
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      width: 100%;
+      min-height: 350px;
+      background-color: #2A3A3F;
+      background-size: cover;
+      background-position: center center;
+      background-repeat: no-repeat;
+      background-image:
+      linear-gradient(
+                    rgba(0, 0, 0, .25),
+                    rgba(0, 0, 0, .25)
+                    ),
+      url('../../images/layout/mainbg.jpg');
+    }
+
+    #jumbo-content {
+      display: flex;
+      justify-content: center;
+      height: 100%;
+      width: 100%;
+    }
+
+    #section1, #section2 {
+      width: 50%;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    #section1 img {
+      border-radius: 50%;
+    }
+
+    #intro {
+      color: white;
+      padding: 15px;
+      background-color: rgba(0, 0, 0, .65);
+      width: 80%;
+      margin: 0 auto;
+      border-radius: 5%;
+    }
+      .intro-content {
+        font-size: 2em;
+        margin: 5px 0;
+      }
+      /* TECHNOLOGIES DIV */
+      .tech-row {
+        width: 360px;
+        margin: 0 auto;
+        margin-top: 15px;
+        overflow: hidden;
+      }
+        .tech-row img {
+          padding: 0 10px;
+          width: 100px;
+          max-width: 100%;
+          float: left;
+        }
+        #location {
+          padding-top: 20px;
+          clear: both;
+        }
+        #github {
+          display: inline-block;
+        }
+        #github-text {
+          float: left;
+          padding-top: 20px;
+        }
+        #github-image {
+          width: 75px;
+          float: left;
+        }
+
+    #bottom-arrow {
+      display: inline-block;
+      font-size: 1.4em;
+      color: lightgray;
+      cursor: pointer;
+      text-align: center;
+      bottom: 1.5%;
+      left: 45%;
+      padding: 20px 0;
+      position: absolute;
+    }
+      #bottom-arrow:hover {
+        color: white;
+      }
+
+      /* MEDIA QUERIES */
+
+    </style>
+  </template>
+</dom-module>

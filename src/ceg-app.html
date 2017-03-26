@@ -2,20 +2,71 @@
 <!-- POLYMER -->
 <link rel="import" href="../bower_components/polymer/polymer-element.html">
 <!-- CUSTOM ELEMENTS -->
-<link rel="import" href="ceg-shell/ceg-shell.html">
-<link rel="import" href="shared-styles.html">
+<link rel="import" href="ceg-icons/ceg-icons.html">
+<link rel="import" href="ceg-styles.html">
 
 <dom-module id="ceg-app">
   <template>
-    <style include="shared-styles">
-      :host {
-        display: block;
+    <style include="ceg-styles"></style>
 
-        padding: 10px;
-      }
-    </style>
+    <div id="container">
+      <section id="jumbotron">
 
-    <ceg-shell></ceg-shell>
+        <div id="jumbo-content">
+
+          <!-- LEFT SECTION -->
+          <div id="section1">
+
+            <div id="portfolio-image">
+              <img src="../../images/michael.jpg" alt="Michael Gee Portfolio Image">
+            </div>
+
+          </div>
+
+          <!-- RIGHT SECTION -->
+          <div id="section2">
+            <div id="intro">
+              <h1>Michael Gee</h1>
+
+              <p class="intro-content">Front End & Progressive Web App Developer</p>
+              <p class="intro-content" style="font-style:italic">My passion is creating fully functional, modern, and progressive web applications.</p>
+
+              <div id="technologies">
+                <div class="tech-row">
+                  <img src="../../images/social/html.png" alt="HTML 5 Icon">
+                  <img src="../../images/social/css.png" alt="CSS 3 Icon">
+                  <img src="../../images/social/javascript.png" alt="JavaScript Icon">
+                </div>
+                <div class="tech-row">
+                  <img src="../../images/social/node.png" alt="Node JS Icon">
+                  <img src="../../images/social/polymer.png" alt="Polymer Icon">
+                  <img src="../../images/social/firebase.svg" alt="Firebase Icon">
+                </div>
+              </div>
+
+              <p id="location" class="intro-content">
+                <iron-icon icon="ceg-icons:location-on"></iron-icon>
+                Atlanta, GA
+              </p>
+
+              <div id="github">
+                <p id="github-text" class="intro-content">View the source code on Github <a href="https://github.com/michaelgee22/portfolio" target="_blank">here</a></p>
+
+                <img id="github-image" src="../../images/social/github.png" alt="Github Logo">
+              </div>
+            </div>
+          </div><!-- SECTION 2 DIV END -->
+
+          <div id="bottom-arrow">
+              <h3>View My Portfolio</h3>
+              <iron-icon icon="ceg-icons:keyboard-arrow-down"></iron-icon>
+
+          </div>
+
+        </div><!-- JUMBOTRON CONTENT -->
+      </section><!-- JUMBOTRON END -->
+
+    </div><!-- CONTAINER DIV END -->
 
   </template>
 
