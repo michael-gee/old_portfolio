@@ -37,6 +37,7 @@
       text-align: center;
       font-size: 1.8em;
       margin: 20px 0;
+      padding: 0 15px;
     }
 
     /* IMAGES */
@@ -45,7 +46,7 @@
     }
 
     a {
-      color: white;
+      color: #093D55;
       text-decoration: underline;
     }
       a:hover {
@@ -131,6 +132,10 @@
         margin: 10px 0;
         display: none;
       }
+        #tech-openDialog {
+          background-color: rgba(255, 255, 255, 0.8);
+          border-radius: 10%;
+        }
       #location {
         padding-top: 15px;
         clear: both;
@@ -138,14 +143,20 @@
       #github {
         display: inline-block;
       }
-      #github-text {
-        float: left;
-        padding-top: 20px;
-      }
-      #github-image {
-        width: 75px;
-        float: left;
-      }
+        #github a {
+          color: white;
+        }
+          #github a:hover {
+            color: red;
+          }
+        #github-text {
+          float: left;
+          padding-top: 20px;
+        }
+        #github-image {
+          width: 75px;
+          float: left;
+        }
       #bottom-arrow {
         display: inline-block;
         color: lightgray;
@@ -159,6 +170,23 @@
           color: white;
         }
 
+    /* APP-BOXES */
+    #appbox-one, #appbox-two, #appbox-three {
+      height: 500px;
+    }
+      #appbox-one {
+        --app-box-background-front-layer: {
+        background-image:
+        linear-gradient(
+                      rgba(0, 0, 100, .25),
+                      rgba(0, 0, 100, .25)
+                      ),
+        url("../images/layout/new-york.jpg");
+        background-position: bottom;
+        height: 100%;
+        };
+      }
+
     /* MY EXPERTISE SECTION */
     #skill-list {
       display: flex;
@@ -167,6 +195,7 @@
       .skill {
         width: 30%;
         padding: 1%;
+        margin-bottom: 2rem;
       }
       .skill-img {
         display: flex;
@@ -184,12 +213,16 @@
         #icon-reference p{
           text-decoration: underline;
           display: inline-block;
+          color: #093D55;
           margin: 0;
         }
           #icon-reference p:hover {
             cursor: pointer;
             color: red;
           }
+        #icon-openDialog div {
+          font-size: 1.4em;
+        }
         #icon-openDialog a{
           color: red;
           text-decoration: none;
@@ -199,41 +232,9 @@
           }
 
       /* MEDIA QUERIES */
-      @media screen and (max-width: 960px) {
-
-      }
       /* TABLET */
       @media screen and (max-width: 960px) {
-        #jumbo-content {
-          display: block;
-        }
-
-        #section1 {
-          display: none;
-        }
-
-        #section2 {
-          margin-top: 25px;
-          text-align: center;
-          width: 100%;
-        }
-
-        #mobileview-pic {
-          display: inline;
-        }
-
-        .tech-row img {
-          width: 75px;
-        }
-
-        #bottom-arrow {
-          width: 100%;
-          text-align: center;
-        }
-      }
-
-      /* PHONE */
-      @media screen and (max-width: 475px) {
+        /* JUMBOTRON  */
         #jumbotron {
           background-image:
           linear-gradient(
@@ -251,6 +252,45 @@
           width: 100%;
           background-color: transparent;
         }
+        #jumbo-content {
+          display: block
+        }
+          #section1 {
+            display: none;
+          }
+
+          #section2 {
+            margin-top: 25px;
+            text-align: center;
+            width: 100%;
+          }
+
+          #mobileview-pic {
+            display: inline;
+          }
+
+          .tech-row img {
+            width: 75px;
+          }
+
+          #bottom-arrow {
+            width: 100%;
+            text-align: center;
+          }
+
+        #appbox-one, #appbox-two, #appbox-three {
+          height: 350px;
+        }
+      }
+
+      /* PHONE */
+      @media screen and (max-width: 736px) {
+        section {
+          border-bottom: 1px solid #ccc;
+        }
+        #section2 {
+          margin: 0;
+        }
           #location {
             padding: 0;
           }
@@ -265,6 +305,7 @@
             }
           #github-text{
             float: none;
+            padding-top: 0;
             text-align: center;
           }
           #github-image {
@@ -274,6 +315,23 @@
           bottom: 0;
           padding: 5px 0;
         }
+
+        /* APP-BOXES */
+        #appbox-one, #appbox-two, #appbox-three {
+          display: none;
+        }
+
+        /* EXPERTISE SECTION */
+        #skill-list {
+          display: block;
+        }
+        .skill {
+          width: 100%;
+          padding: 0;
+        }
+          .skill p {
+            padding: 0 15px;
+          }
       }
 
       @media screen and (max-width: 350px) {
