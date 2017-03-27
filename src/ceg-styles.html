@@ -8,15 +8,35 @@
     /* HEADINGS */
     h1, h2, h3, h4, h5, h6 {
       margin: 0;
+      text-align: center;
     }
 
+    /*  MAIN HEADER */
     h1 {
       font-size: 3.2em;
     }
 
+    /* SECTION HEADERS */
+    h2 {
+      font-size: 3.2em;
+      margin-top: 3rem;
+    }
+
+      /* SECTION SUBHEADINGS */
+      h3 {
+        font-size: 2.6em;
+      }
+
+    /* PARAGRAPH FONT */
     p {
       margin: 0;
       font-size: 1.6em;
+    }
+
+    #expertise p, #projects p {
+      text-align: center;
+      font-size: 1.8em;
+      margin: 20px 0;
     }
 
     /* IMAGES */
@@ -96,7 +116,6 @@
         font-size: 2em;
         margin: 5px 0;
       }
-      /* TECHNOLOGIES DIV */
       .tech-row {
         max-width: 100%;
         margin-bottom: 5px;
@@ -105,7 +124,7 @@
           margin: 0 5px;
           width: 100px;
         }
-      #my-stack{
+      #tech-open{
         font-size: 1.6em;
         background-color: white;
         color: black;
@@ -127,20 +146,57 @@
         width: 75px;
         float: left;
       }
-
-    #bottom-arrow {
-      display: inline-block;
-      font-size: 1.4em;
-      color: lightgray;
-      cursor: pointer;
-      text-align: center;
-      bottom: 1.5%;
-      padding: 20px 0;
-      position: absolute;
-    }
-      #bottom-arrow:hover {
-        color: white;
+      #bottom-arrow {
+        display: inline-block;
+        color: lightgray;
+        cursor: pointer;
+        text-align: center;
+        bottom: 1.5%;
+        padding: 20px 0;
+        position: absolute;
       }
+        #bottom-arrow:hover {
+          color: white;
+        }
+
+    /* MY EXPERTISE SECTION */
+    #skill-list {
+      display: flex;
+      justify-content: space-around;
+    }
+      .skill {
+        width: 30%;
+        padding: 1%;
+      }
+      .skill-img {
+        display: flex;
+        margin: 0 auto;
+        margin-bottom: 25px;
+      }
+      .skill-img img {
+        width: 256px;
+        margin: 0 auto;
+      }
+      #icon-reference {
+        text-align: center;
+        margin-bottom: 3rem;
+      }
+        #icon-reference p{
+          text-decoration: underline;
+          display: inline-block;
+          margin: 0;
+        }
+          #icon-reference p:hover {
+            cursor: pointer;
+            color: red;
+          }
+        #icon-openDialog a{
+          color: red;
+          text-decoration: none;
+        }
+          #icon-openDialog a:hover{
+            text-decoration: underline;
+          }
 
       /* MEDIA QUERIES */
       @media screen and (max-width: 960px) {
@@ -177,7 +233,7 @@
       }
 
       /* PHONE */
-      @media screen and (max-width: 450px) {
+      @media screen and (max-width: 475px) {
         #jumbotron {
           background-image:
           linear-gradient(
@@ -204,7 +260,7 @@
           #technologies {
             display: none;
           }
-            #my-stack {
+            #tech-open {
               display: inline-block;
             }
           #github-text{

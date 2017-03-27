@@ -1,6 +1,9 @@
 <!-- IMPORTS -->
 <!-- POLYMER -->
 <link rel="import" href="../bower_components/polymer/polymer-element.html">
+<!-- APP ELEMENTS -->
+<link rel="import" href="../bower_components/app-layout/app-box/app-box.html">
+<link rel="import" href="../bower_components/app-layout/app-scroll-effects/effects/parallax-background.html">
 <!-- PAPER ELEMENTS -->
 <link rel="import" href="../bower_components/paper-button/paper-button.html">
 <link rel="import" href="../bower_components/paper-dialog/paper-dialog.html">
@@ -33,7 +36,7 @@
 
               <img id="mobileview-pic" src="../../images/michael.jpg" alt="Michael Gee Portfolio Image">
 
-              <p class="intro-content">Front End & Progressive Web App Developer</p>
+              <p class="intro-content">Front End &#38; Progressive Web App Developer</p>
               <p id="intro-message" class="intro-content">My passion is creating fully functional, modern, and progressive web applications.</p>
 
               <div id="technologies">
@@ -50,11 +53,11 @@
               </div>
 
               <!-- TECHNOLOGIES BUTTON ONLY SHOWN ON MOBILE -->
-              <paper-button id="my-stack" on-tap="openTechDialog" raised>
+              <paper-button id="tech-open" on-tap="openDialog" raised>
                 <iron-icon icon="ceg-icons:polymer"></iron-icon>
                 Technologies
               </paper-button>
-                <paper-dialog id="techDialog" with-backdrop>
+                <paper-dialog id="tech-openDialog" with-backdrop>
                   <div class="tech-row">
                     <img src="../images/social/html.png" alt="HTML 5 Icon">
                     <img src="../images/social/css.png" alt="CSS 3 Icon">
@@ -83,23 +86,75 @@
           </div><!-- SECTION 2 DIV END -->
 
           <div id="bottom-arrow">
-              <h3>View My Portfolio</h3>
+              <p>View My Portfolio</p>
               <iron-icon icon="ceg-icons:keyboard-arrow-down"></iron-icon>
           </div>
 
         </div><!-- JUMBOTRON CONTENT -->
       </section><!-- JUMBOTRON END -->
 
+      <section id="expertise">
+        <h2>My Expertise</h2>
+
+        <p>I use these skills on a daily basis to keep producing and improving.</p>
+
+        <div id="skill-list">
+
+          <div class="skill">
+            <img src="../images/layout/browser.png" class="skill-img" alt="Building Skill Icon">
+            <h3>Building</h3>
+            <p>With an advanced understanding of JavaScript along with Firebase and Polymer (2) I build Progressive Web Applications (PWAs) to create "native-like" app experiences on the mobile and web browsers with new state of the art features including <strong> offline caching, lightning fast connectivity, increased engagement, improved reliability</strong>, and many more.</p>
+          </div>
+          <div class="skill">
+            <img src="../images/layout/devices.png" class="skill-img" alt="UI/UX Skill Icon">
+            <h3>UI/UX</h3>
+            <p>With over a year of experience with HTML and CSS I make it a top priority to make every application fully responsive and clean across all platforms. I use my strong foundational knowledge in CSS and the use of Polymer elements to create beautiful and simple <strong>User Interfaces</strong>. I strongly believe a good <strong>User Experience</strong> is the backbone of any successful application.</p>
+          </div>
+          <div class="skill">
+            <img src="../images/layout/lightbulb.png" class="skill-img" alt="Innovating Skill Icon">
+            <h3>Innovating</h3>
+            <p>Having the ability to be creative and problem solve are just as important (if not more) than your ability to code. I take pride in not only being able to solve existing problems, but creating new ideas to solve problems before they can even happen. I strive to innovate and constantly improve to stay ahead of the curve to build and create things people have never seen before.</p>
+          </div>
+        </div><!-- SKILL LIST DIV END -->
+
+         <div id="icon-reference">
+          <p id="icon-open" on-tap="openDialog">Icon Reference</p>
+         </div>
+         <!-- ICON REFERENCE DIALOG -->
+         <paper-dialog id="icon-openDialog" with-backdrop>
+            <div>Icons made by <a href="http://www.flaticon.com/authors/dimi-kazak" title="Dimi Kazak">Dimi Kazak</a> from <a href="http://www.flaticon.com" title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div>
+            <div>Icons made by <a href="http://www.flaticon.com/authors/vectors-market" title="Vectors Market">Vectors Market</a> from <a href="http://www.flaticon.com" title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div>
+         </paper-dialog>
+      </section><!-- EXPERTISE SECTION END -->
+
+      <app-box id="appbox-one" effects="parallax-background"></app-box>
+
+      <section id="projects">
+        <h2>My Work</h2>
+
+        <p>These are some of the applications I have worked on</p>
+      </section>
+
     </div><!-- CONTAINER DIV END -->
 
   </template>
 
   <script>
-    class CegmagApp extends Polymer.Element {
+    class CegmagApp extends Polymer.GestureEventListeners(Polymer.Element) {
+
       static get is() { return 'ceg-app'; }
 
-      openTechDialog() {
-        this.$['techDialog'].open();
+      static get properties() {
+        return {
+
+        }
+      }
+
+      openDialog(e) {
+        var dialog = e.currentTarget.id;
+        dialog = dialog + "Dialog";
+
+        this.$[dialog].open();
       }
     }
 
