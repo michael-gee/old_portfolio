@@ -41,14 +41,14 @@
 
               <div id="technologies">
                 <div class="tech-row">
-                  <img src="../images/social/html.png" alt="HTML 5 Icon">
-                  <img src="../images/social/css.png" alt="CSS 3 Icon">
-                  <img src="../images/social/javascript.png" alt="JavaScript Icon">
+                  <img src="../images/tech/html.png" alt="HTML 5 Icon">
+                  <img src="../images/tech/css.png" alt="CSS 3 Icon">
+                  <img src="../images/tech/javascript.png" alt="JavaScript Icon">
                 </div>
                 <div class="tech-row">
-                  <img src="../images/social/node.png" alt="Node JS Icon">
-                  <img src="../images/social/polymer.png" alt="Polymer Icon">
-                  <img src="../images/social/firebase.svg" alt="Firebase Icon">
+                  <img src="../images/tech/node.png" alt="Node JS Icon">
+                  <img src="../images/tech/polymer.png" alt="Polymer Icon">
+                  <img src="../images/tech/firebase.svg" alt="Firebase Icon">
                 </div>
               </div>
 
@@ -59,16 +59,16 @@
               </paper-button>
                 <paper-dialog id="tech-openDialog" with-backdrop>
                   <div class="tech-row">
-                    <img src="../images/social/html.png" alt="HTML 5 Icon">
-                    <img src="../images/social/css.png" alt="CSS 3 Icon">
+                    <img src="../images/tech/html.png" alt="HTML 5 Icon">
+                    <img src="../images/tech/css.png" alt="CSS 3 Icon">
                   </div>
                   <div class="tech-row">
-                    <img src="../images/social/javascript.png" alt="JavaScript Icon">
-                    <img src="../images/social/node.png" alt="Node JS Icon">
+                    <img src="../images/tech/javascript.png" alt="JavaScript Icon">
+                    <img src="../images/tech/node.png" alt="Node JS Icon">
                   </div>
                   <div class="tech-row">
-                    <img src="../images/social/polymer.png" alt="Polymer Icon">
-                    <img src="../images/social/firebase.svg" alt="Firebase Icon">
+                    <img src="../images/tech/polymer.png" alt="Polymer Icon">
+                    <img src="../images/tech/firebase.svg" alt="Firebase Icon">
                   </div>
                 </paper-dialog>
 
@@ -80,7 +80,7 @@
               <div id="github">
                 <p id="github-text" class="intro-content">View the source code on Github <a href="https://github.com/michaelgee22/portfolio" target="_blank">here</a></p>
 
-                <img id="github-image" src="../../images/social/github.png" alt="Github Logo">
+                <img id="github-image" src="../../images/tech/github.png" alt="Github Logo">
               </div>
             </div>
           </div><!-- SECTION 2 DIV END -->
@@ -124,6 +124,9 @@
          <paper-dialog id="icon-openDialog" with-backdrop>
             <div>Icons made by <a href="http://www.flaticon.com/authors/dimi-kazak" title="Dimi Kazak">Dimi Kazak</a> from <a href="http://www.flaticon.com" title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div>
             <div>Icons made by <a href="http://www.flaticon.com/authors/vectors-market" title="Vectors Market">Vectors Market</a> from <a href="http://www.flaticon.com" title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div>
+            <div>Icons made by <a href="http://www.freepik.com" title="Freepik">Freepik</a> from <a href="http://www.flaticon.com" title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div>
+            <div>Icons made by <a href="http://www.flaticon.com/authors/roundicons" title="Roundicons">Roundicons</a> from <a href="http://www.flaticon.com" title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div>
+
          </paper-dialog>
       </section><!-- EXPERTISE SECTION END -->
 
@@ -177,8 +180,56 @@
 
         <p>Interested in hiring me or want to discuss a project? Click the button below!</p>
 
-
+        <div id="contact-buttons">
+          <paper-button raised>
+            Contact Me
+            <iron-icon icon="ceg-icons:email"></iron-icon>
+          </paper-button>
+          <paper-button raised>
+            View Résumé
+            <iron-icon icon="ceg-icons:book"></iron-icon>
+          </paper-button>
+        </div>
       </section>
+
+      <footer>
+        <h4>Hand Coded by Michael Gee &#169; 2017</h4>
+
+        <div id="social-media-icons">
+          <a href="https://www.instagram.com/michaelgee7/" target="_blank">
+            <img src="../images/social-media/instagram.png" alt="Instagram Icon">
+          </a>
+          <a href="https://www.facebook.com/michael.gee.167" target="_blank">
+            <img src="../images/social-media/facebook.png" alt="Facebook Icon">
+          </a>
+          <a href="https://www.linkedin.com/in/michael-gee/" target="_blank">
+            <img src="../images/social-media/linkedin.png" alt="LinkedIn Icon">
+          </a>
+
+          <img id="email" src="../images/social-media/gmail.png" on-tap="openDialog" alt="G Mail Icon">
+          <paper-dialog id="emailDialog" with-backdrop>
+            <div class="social-dialog">michaelgee221@gmail.com</div>
+          </paper-dialog>
+
+          <a href="https://twitter.com/michaelgee7" target="_blank">
+            <img src="../images/social-media/twitter.png" alt="Twitter Icon">
+          </a>
+
+          <img id="skype" src="../images/social-media/skype.png" on-tap="openDialog" alt="Skype Icon">
+          <paper-dialog id="skypeDialog" with-backdrop>
+            <div class="social-dialog">michael.gee24</div>
+          </paper-dialog>
+
+          <a href="https://www.michaelgee.me/" target="_blank">
+            <img src="../images/social-media/wordpress.png" alt="Wordpress Icon">
+          </a>
+          <a href="https://github.com/michaelgee22" target="_blank">
+            <img src="../images/social-media/github.png" alt="Github Icon">
+          </a>
+        </div>
+
+
+      </footer>
 
     </div><!-- CONTAINER DIV END -->
 
