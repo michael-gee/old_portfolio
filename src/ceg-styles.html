@@ -180,8 +180,8 @@
         --app-box-background-front-layer: {
         background-image:
         linear-gradient(
-                      rgba(0, 0, 150, .25),
-                      rgba(0, 0, 150, .25)
+                      rgba(0, 0, 100, .25),
+                      rgba(0, 0, 100, .25)
                       ),
         url("../images/layout/new-york.jpg");
         background-position: bottom;
@@ -280,8 +280,11 @@
     #contact-buttons {
       display: flex;
       justify-content: center;
-      margin-bottom: 3.2rem;
+      margin-bottom: 2.5rem;
     }
+      #contact-buttons a {
+        text-decoration: none;
+      }
       #contact-buttons paper-button {
         font-size: 2em;
         margin: 15px 15px 0px 15px;
@@ -456,7 +459,15 @@
       /* CONTACT SECTION */
       #contact-buttons {
         flex-direction: column;
+        margin-bottom: 2rem;
       }
+        #contact-buttons a {
+          text-align: center;
+        }
+        #contact-buttons paper-button {
+          width: 60%;
+          margin: 20px 0px;
+        }
     }
 
     /* SMALL PHONE QUERIES (IPHONE 5) */
