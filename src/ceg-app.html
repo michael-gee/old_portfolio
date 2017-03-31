@@ -1,8 +1,6 @@
 <!-- IMPORTS -->
 <!-- POLYMER -->
 <link rel="import" href="../bower_components/polymer/polymer-element.html">
-<!-- APP ELEMENTS -->
-<link rel="import" href="../bower_components/app-layout/app-box/app-box.html">
 <!-- PAPER ELEMENTS -->
 <link rel="import" href="../bower_components/paper-button/paper-button.html">
 <link rel="import" href="../bower_components/paper-dialog/paper-dialog.html">
@@ -12,7 +10,248 @@
 
 <dom-module id="ceg-app">
   <template>
-    <style include="ceg-styles"></style>
+    <style include="ceg-styles">
+    /* CONTAINER */
+    #container {
+      width: 100%;
+    }
+
+    /* JUMBOTRON SECTION */
+    #jumbotron {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      width: 100%;
+      background-color: #2A3A3F;
+      background-size: cover;
+      background-position: center center;
+      background-repeat: no-repeat;
+      background-image:
+      linear-gradient(
+                    rgba(0, 0, 0, .25),
+                    rgba(0, 0, 0, .25)
+                    ),
+      url('../../images/layout/mainbg.jpg');
+    }
+
+    #jumbo-content {
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      width: 100%;
+    }
+
+    #section1, #section2 {
+      width: 50%;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    #section1 img {
+      border-radius: 50%;
+    }
+
+    #intro {
+      color: white;
+      padding: 15px;
+      background-color: rgba(0, 0, 0, .45);
+      width: 80%;
+      margin: 0 auto;
+      border-radius: 5%;
+    }
+      #mobileview-pic {
+        width: 150px;
+        border-radius: 50%;
+        display: none;
+      }
+      #intro-message {
+        font-style: italic;
+        margin-bottom: 25px;
+      }
+      .intro-content {
+        font-size: 2em;
+        margin: 5px 0;
+      }
+      .tech-row {
+        max-width: 100%;
+        margin-bottom: 5px;
+      }
+        .tech-row img {
+          margin: 0 5px;
+          width: 100px;
+        }
+      #tech-open{
+        font-size: 1.6em;
+        background-color: white;
+        color: black;
+        margin: 10px 0;
+        display: none;
+      }
+        #tech-openDialog {
+          background-color: rgba(255, 255, 255, 0.8);
+          border-radius: 10%;
+        }
+      #location {
+        padding-top: 15px;
+        clear: both;
+      }
+      #github {
+        display: inline-block;
+      }
+        #github a {
+          color: white;
+        }
+          #github a:hover {
+            color: red;
+          }
+        #github-text {
+          float: left;
+          padding-top: 20px;
+        }
+        #github-image {
+          width: 75px;
+          float: left;
+        }
+      #bottom-arrow {
+        display: inline-block;
+        color: lightgray;
+        cursor: pointer;
+        text-align: center;
+        bottom: 1.5%;
+        padding: 20px 0;
+        position: absolute;
+      }
+        #bottom-arrow:hover {
+          color: white;
+        }
+
+    /* MEDIA QUERIES */
+    /* JUMBOTRON GITHUB IMAGE FIX */
+    @media screen and (max-width: 1125px) {
+      #github {
+        display: block;
+      }
+        #github-text, #github-image {
+          float: none;
+        }
+    }
+
+    /* TABLET */
+    @media screen and (max-width: 960px) {
+      /* JUMBOTRON  */
+      #jumbotron {
+        background-image:
+        linear-gradient(
+                      rgba(0, 0, 0, .45),
+                      rgba(0, 0, 0, .45)
+                      ),
+        url('../../images/layout/mainbg.jpg');
+      }
+      #section2 {
+        margin: 0;
+      }
+      #intro {
+        padding: 0;
+        margin: 0;
+        width: 100%;
+        background-color: transparent;
+      }
+      #jumbo-content {
+        display: block
+      }
+        #section1 {
+          display: none;
+        }
+
+        #section2 {
+          margin-top: 25px;
+          text-align: center;
+          width: 100%;
+        }
+
+        #mobileview-pic {
+          display: inline;
+        }
+
+        .tech-row img {
+          width: 75px;
+        }
+
+        #bottom-arrow {
+          width: 100%;
+          text-align: center;
+        }
+      }
+    /* PHONE */
+    @media screen and (max-width: 736px) {
+      #section2 {
+        margin: 0;
+      }
+        #location {
+          padding: 0;
+        }
+        #intro-message {
+          margin-bottom: 5px;
+        }
+        #technologies {
+          display: none;
+        }
+          #tech-open {
+            display: inline-block;
+          }
+        #github-text{
+          float: none;
+          padding-top: 0;
+          text-align: center;
+        }
+      #bottom-arrow {
+        bottom: 0;
+        padding: 5px 0;
+      }
+    }
+
+    /* SMALL PHONE QUERIES (IPHONE 5) */
+    @media screen and (max-width: 360px) {
+      #github-text {
+        padding: 0;
+      }
+      #github-image {
+        display: none;
+      }
+      .intro-content {
+        font-size: 1.8em;
+      }
+      #bottom-arrow p {
+        font-size: 1.2em;
+      }
+    }
+
+    /* PHONE IN LANDSCAPE MODE */
+    @media screen
+    and (max-width: 750px)
+    and (orientation: landscape) {
+      #jumbotron {
+        background-image:
+        linear-gradient(
+                      rgba(0, 0, 0, .45),
+                      rgba(0, 0, 0, .45)
+                      ),
+        url('../../images/layout/mainbg.jpg');
+      }
+      #intro {
+        padding: 0;
+        margin: 0;
+        width: 100%;
+        background-color: transparent;
+      }
+      #bottom-arrow {
+        display: none;
+      }
+    }
+    </style>
 
     <div id="container">
       <section id="jumbotron">
@@ -92,149 +331,7 @@
         </div><!-- JUMBOTRON CONTENT -->
       </section><!-- JUMBOTRON END -->
 
-      <section id="expertise">
-        <h2>My Expertise</h2>
-
-        <p>I use these skills on a daily basis to keep developing and improving.</p>
-
-        <div id="skill-list">
-
-          <div class="skill">
-            <img src="../images/layout/browser.png" class="skill-img" alt="Building Skill Icon">
-            <h3>Developing</h3>
-            <p>With an advanced understanding of JavaScript along with Firebase and Polymer (2) I build Progressive Web Applications (PWAs) to create "native-like" app experiences on the mobile and web browsers with new state of the art features including <strong> offline caching, lightning fast connectivity, increased engagement, improved reliability</strong>, and many more.</p>
-          </div>
-          <div class="skill">
-            <img src="../images/layout/devices.png" class="skill-img" alt="UI/UX Skill Icon">
-            <h3>UI/UX</h3>
-            <p>With over a year of experience with HTML and CSS I make it a top priority to make every application fully responsive and clean across all platforms. I use my strong foundational knowledge in CSS and the use of Polymer elements to create beautiful and simple <strong>User Interfaces</strong>. I strongly believe a good <strong>User Experience</strong> is the backbone of any successful application.</p>
-          </div>
-          <div class="skill">
-            <img src="../images/layout/lightbulb.png" class="skill-img" alt="Innovating Skill Icon">
-            <h3>Innovating</h3>
-            <p>Having the ability to be creative and problem solve are just as important (if not more) than your ability to code. I take pride in not only being able to solve existing problems, but creating new ideas to solve problems before they can even happen. I strive to innovate and constantly improve to stay ahead of the curve to build and create things people have never seen before.</p>
-          </div>
-        </div><!-- SKILL LIST DIV END -->
-
-         <div id="icon-reference">
-          <p id="icon-open" on-tap="openDialog">Icon Reference</p>
-         </div>
-         <!-- ICON REFERENCE DIALOG -->
-         <paper-dialog id="icon-openDialog" with-backdrop>
-            <div>Icons made by <a href="http://www.flaticon.com/authors/dimi-kazak" title="Dimi Kazak">Dimi Kazak</a> from <a href="http://www.flaticon.com" title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div>
-            <div>Icons made by <a href="http://www.flaticon.com/authors/vectors-market" title="Vectors Market">Vectors Market</a> from <a href="http://www.flaticon.com" title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div>
-            <div>Icons made by <a href="http://www.freepik.com" title="Freepik">Freepik</a> from <a href="http://www.flaticon.com" title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div>
-            <div>Icons made by <a href="http://www.flaticon.com/authors/roundicons" title="Roundicons">Roundicons</a> from <a href="http://www.flaticon.com" title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div>
-
-         </paper-dialog>
-      </section><!-- EXPERTISE SECTION END -->
-
-      <app-box id="appbox-one"></app-box>
-
-      <section id="projects">
-        <h2>My Work</h2>
-
-        <p style="margin-bottom:0;">A majority of my projects can be found on my <a href="https://github.com/michaelgee22" target="_blank">Github</a></p>
-
-        <div id="examples">
-          <div id="first-example" class="example">
-            <div class="example-text">
-              <h3>CEGMAG Solutions Inc.</h3>
-              <p>Family software company's application that is <strong>currently in development</strong>. While in development this repository is private but demos will release, portraying the many new exciting features that are expected to make a web application progressive.</p>
-            </div>
-            <div class="example-img">
-              <img src="../images/layout/cegmag.PNG" alt="Cegmag Solutions preview image">
-            </div>
-          </div>
-
-          <div class="example">
-            <div class="example-text">
-              <h3>Chat-Box</h3>
-              <p>A multi-thread progressive web application that uses Polymer (2) and Firebase to authenticate users and give them a fast and functional chat experience that works across all platforms.</p>
-            </div>
-            <div class="example-img">
-              <img src="../images/layout/chat-box.png" alt="Chat-Box preview image">
-            </div>
-          </div>
-
-          <div id="last-example" class="example">
-            <div class="example-text">
-              <h3>Front End Portfolio</h3>
-              <p>This is a HTML/CSS rough draft representation of my portfolio that includes all of my practice front end applications that display my knowledge of responsive web design and advanced JavaScript including new ES6 features.</p>
-            </div>
-            <div class="example-img">
-              <img src="../images/layout/rd-portfolio.PNG" alt="Front End Portfolio preview image">
-            </div>
-          </div>
-
-          <div id="project-links">Links to Projects: <a href="https://chat-box-217e3.firebaseapp.com/" target="_blank">Chat-Box</a> -- <a href="https://michaelgee22.github.io/rd2-portfolio/" target="_blank">Front End Portfolio</a></div>
-
-        </div><!-- EXAMPLES DIV END -->
-      </section><!-- MY WORK SECTION END -->
-
-      <app-box id="appbox-two"></app-box>
-
-      <section id="contact">
-        <h2>Contact Me</h2>
-
-        <p>Interested in hiring me or want to discuss a project? Click the button below!</p>
-
-        <div id="contact-buttons">
-          <a href="https://www.michaelgee.me/contact/" target="_blank">
-            <paper-button raised>
-              Contact Me
-              <iron-icon icon="ceg-icons:email"></iron-icon>
-            </paper-button>
-          </a>
-
-          <div id="contact-buttons">
-            <a href="https://www.michaelgee.me/wp-content/uploads/2017/03/Michaels-R%C3%A9sum%C3%A9.pdf" target="_blank">
-              <paper-button raised>
-                View Résumé
-                <iron-icon icon="ceg-icons:book"></iron-icon>
-              </paper-button>
-            </a>
-        </div>
-      </section>
-
-      <footer>
-        <h4>Hand Coded by Michael Gee &#169; 2017</h4>
-
-        <div id="social-media-icons">
-          <a href="https://www.instagram.com/michaelgee7/" target="_blank">
-            <img src="../images/social-media/instagram.png" alt="Instagram Icon">
-          </a>
-          <a href="https://www.facebook.com/michael.gee.167" target="_blank">
-            <img src="../images/social-media/facebook.png" alt="Facebook Icon">
-          </a>
-          <a href="https://www.linkedin.com/in/michael-gee/" target="_blank">
-            <img src="../images/social-media/linkedin.png" alt="LinkedIn Icon">
-          </a>
-
-          <img id="email" src="../images/social-media/gmail.png" on-tap="openDialog" alt="G Mail Icon">
-          <paper-dialog id="emailDialog" with-backdrop>
-            <div class="social-dialog">michaelgee221@gmail.com</div>
-          </paper-dialog>
-
-          <a href="https://twitter.com/michaelgee7" target="_blank">
-            <img src="../images/social-media/twitter.png" alt="Twitter Icon">
-          </a>
-
-          <img id="skype" src="../images/social-media/skype.png" on-tap="openDialog" alt="Skype Icon">
-          <paper-dialog id="skypeDialog" with-backdrop>
-            <div class="social-dialog">michael.gee24</div>
-          </paper-dialog>
-
-          <a href="https://www.michaelgee.me/" target="_blank">
-            <img src="../images/social-media/wordpress.png" alt="Wordpress Icon">
-          </a>
-          <a href="https://github.com/michaelgee22" target="_blank">
-            <img src="../images/social-media/github.png" alt="Github Icon">
-          </a>
-        </div>
-
-
-      </footer>
+      <ceg-content></ceg-content>
 
     </div><!-- CONTAINER DIV END -->
 
@@ -243,16 +340,15 @@
   <script>
     class CegmagApp extends Polymer.GestureEventListeners(Polymer.Element) {
 
-      static get is() { return 'ceg-app'; }
-
-      static get properties() {
-        return {
-
-        }
+      connectedCallback(){
+        super.connectedCallback();
+        Polymer.Base.importHref('src/ceg-content.html');
       }
 
+      static get is() { return 'ceg-app'; }
+
       pageScroll(){
-        var section = this.$['expertise'];
+        var section = this.$["ceg-content"];
 
         section.scrollIntoView({block: "start", behavior: "smooth"});
       }
