@@ -1,14 +1,17 @@
 <!-- IMPORTS -->
 <!-- POLYMER -->
 <link rel="import" href="../bower_components/polymer/polymer-element.html">
+<!-- CUSTOM ELEMENTS -->
+<link rel="import" href="ceg-styles.html">
+<link rel="import" href="ceg-icons/ceg-icons.html">
 <!-- APP ELEMENTS -->
 <link rel="import" href="../bower_components/app-layout/app-box/app-box.html">
 <!-- PAPER ELEMENTS -->
 <link rel="import" href="../bower_components/paper-button/paper-button.html">
 <link rel="import" href="../bower_components/paper-dialog/paper-dialog.html">
-<!-- CUSTOM ELEMENTS -->
-<link rel="import" href="ceg-icons/ceg-icons.html">
-<link rel="import" href="ceg-styles.html">
+<!-- IRON ELEMETS -->
+<link rel="import" href="../bower_components/iron-image/iron-image.html">
+
 
 <dom-module id="ceg-app">
   <template>
@@ -23,7 +26,7 @@
           <div id="section1">
 
             <div id="portfolio-image">
-              <img src="../../images/michael.jpg" alt="Michael Gee Portfolio Image">
+              <img src="../images/michael.jpg" alt="Michael Gee Portfolio Image">
             </div>
 
           </div>
@@ -33,7 +36,7 @@
             <div id="intro">
               <h1>Michael Gee</h1>
 
-              <img id="mobileview-pic" src="../../images/michael.jpg" alt="Michael Gee Portfolio Image">
+              <img id="mobileview-pic" src="../images/michael.jpg" alt="Michael Gee Portfolio Image">
 
               <p class="intro-content">Front End &#38; Progressive Web App Developer</p>
               <p id="intro-message" class="intro-content">My passion is creating fully functional, modern, and progressive web applications.</p>
@@ -143,7 +146,7 @@
               <p>Family software company's application that is <strong>currently in development</strong>. While in development this repository is private but demos will release, portraying the many new exciting features that are expected to make a web application progressive.</p>
             </div>
             <div class="example-img">
-              <img src="../images/layout/cegmag.PNG" alt="Cegmag Solutions preview image">
+              <iron-image src="../images/layout/cegmag.PNG" alt="Cegmag Solutions preview image"></iron-image>
             </div>
           </div>
 
@@ -153,7 +156,7 @@
               <p>A multi-thread progressive web application that uses Polymer (2) and Firebase to authenticate users and give them a fast and functional chat experience that works across all platforms.</p>
             </div>
             <div class="example-img">
-              <img src="../images/layout/chat-box.png" alt="Chat-Box preview image">
+              <iron-image src="../images/layout/chat-box.png" alt="Chat-Box preview image"></iron-image>
             </div>
           </div>
 
@@ -163,7 +166,7 @@
               <p>This is a HTML/CSS rough draft representation of my portfolio that includes all of my practice front end applications that display my knowledge of responsive web design and advanced JavaScript including new ES6 features.</p>
             </div>
             <div class="example-img">
-              <img src="../images/layout/rd-portfolio.PNG" alt="Front End Portfolio preview image">
+              <iron-image src="../images/layout/rd-portfolio.PNG" alt="Front End Portfolio preview image" preload style="background-color: lightgray"></iron-image>
             </div>
           </div>
 

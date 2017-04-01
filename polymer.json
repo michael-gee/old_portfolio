@@ -8,9 +8,20 @@
   ],
   "extraDependencies": [
     "manifest.json",
-    "bower_components/webcomponentsjs/*.js"
+    "bower_components/webcomponentsjs/*.js",
+    "database.rules.json",
+    "firebase.json",
+    ".firebaserc",
+    "functions/**/*"
   ],
   "lint": {
     "rules": ["polymer-2"]
-  }
+  },
+  "builds": [{
+      "bundle": true,
+      "addServiceWorker": true,
+      "js": {"minify": true},
+      "css": {"minify": true},
+      "html": {"minify": true}
+    }]
 }

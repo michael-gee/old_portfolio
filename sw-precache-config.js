@@ -5,6 +5,7 @@ module.exports = {
     '/index.html',
     '/manifest.json',
     '/bower_components/webcomponentsjs/*',
+    'images/layout/mainbg.jpg'
   ],
   navigateFallback: 'index.html',
 };
