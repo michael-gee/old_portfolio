@@ -1,6 +1,6 @@
 {
-  "name": "Personal Portfolio",
-  "short_name": "Portfolio",
+  "name": "Michael Gee's Portfolio",
+  "short_name": "MG Portfolio",
   "start_url": "/",
   "display": "standalone",
   "theme_color": "#3f51b5",
