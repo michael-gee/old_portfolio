@@ -4,6 +4,8 @@
 
 A front end project using HTML/CSS/JavaScript along with Polymer 2 elements and Firebase hosting to display full functional and fast progressive web app displaying my previous and current projects.
 
+Project link here: https://portfolio-c4ab3.firebaseapp.com/
+
 ### Features include:
 
 * Lightning fast load time (even on mobile - 1508.5ms average)
