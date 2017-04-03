@@ -18,17 +18,3 @@ A front end project using HTML/CSS/JavaScript along with Polymer 2 elements and 
 ### Lighthouse (PWA) Report
 
 ![Screenshot](images/test.PNG)
-
-### Run Application on your Local Machine:
-
-    git clone https://github.com/michaelgee22/portfolio.git
-
-Install the Dependencies
-
-    bower install
-
-Serve the application
-
-    polymer serve
-
-Application will be running on localhost:8081
