@@ -4,47 +4,34 @@
 <dom-module id="ceg-styles">
   <template>
     <style>
-
     /* HEADINGS */
     h1, h2, h3, h4, h5, h6 {
       margin: 0;
       text-align: center;
     }
-
     /*  MAIN HEADER */
     h1 {
       font-size: 3.2em;
     }
-
     /* SECTION HEADERS */
     h2 {
       font-size: 3.2em;
       margin-top: 3rem;
     }
-
-      /* SECTION SUBHEADINGS */
-      h3 {
-        font-size: 2.6em;
-      }
-
+    /* SECTION SUBHEADINGS */
+    h3 {
+      font-size: 2.6em;
+    }
     /* PARAGRAPH FONT */
     p {
       margin: 0;
       font-size: 1.6em;
     }
-
-    #expertise p, #projects p, #contact p {
-      text-align: center;
-      font-size: 1.8em;
-      margin: 20px 0;
-      padding: 0 15px;
-    }
-
     /* IMAGES */
-    img {
+    img, iron-image {
       max-width: 100%;
+      --iron-image-width: 100%;
     }
-
     /* LINKS */
     a {
       color: #093D55;
@@ -54,6 +41,9 @@
         color: red;
         text-decoration: underline;
       }
+    [hidden] {
+      display: none !important;
+    }
 
     /* CONTAINER */
     #container {
@@ -66,7 +56,6 @@
       display: flex;
       flex-direction: column;
       position: relative;
-      width: 100%;
       background-color: #2A3A3F;
       background-size: cover;
       background-position: center center;
@@ -78,26 +67,21 @@
                     ),
       url('../images/layout/mainbg.jpg');
     }
-
-    #jumbo-content {
-      min-height: 100vh;
-      display: flex;
-      justify-content: center;
-      width: 100%;
-    }
-
-    #section1, #section2 {
-      width: 50%;
-      text-align: center;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-    }
-
-    #section1 img {
-      border-radius: 50%;
-    }
-
+      #jumbo-content {
+        min-height: 100vh;
+        display: flex;
+        justify-content: center;
+      }
+        #section1, #section2 {
+          width: 50%;
+          text-align: center;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+        }
+        #portfolio-image {
+          border-radius: 50%;
+        }
     #intro {
       color: white;
       padding: 15px;
@@ -109,43 +93,39 @@
       #mobileview-pic {
         width: 150px;
         border-radius: 50%;
-        display: none;
       }
       #intro-message {
         font-style: italic;
-        margin-bottom: 25px;
+        margin-bottom: 15px;
       }
       .intro-content {
         font-size: 2em;
-        margin: 5px 0;
       }
       .tech-row {
         max-width: 100%;
       }
-        #tech-row2 {
-          margin: 15px 0 0 0;
-        }
         .tech-row img {
           margin: 0 5px;
           width: 100px;
+        }
+        #tech-row2 {
+          margin-top: 3px;
+        }
+        #tech-row3 {
+          margin-top: -10px;
         }
       #tech-open{
         font-size: 1.6em;
         background-color: white;
         color: black;
-        margin: 10px 0;
-        display: none;
       }
         #tech-openDialog {
           background-color: rgba(255, 255, 255, 0.8);
           border-radius: 10%;
         }
-      #location {
-        padding-top: 15px;
-        clear: both;
-      }
       #github {
         display: inline-block;
+        color: white;
       }
         #github a {
           color: white;
@@ -205,6 +185,12 @@
       }
 
     /* MY EXPERTISE SECTION */
+    #expertise p, #projects p, #contact p {
+      text-align: center;
+      font-size: 1.8em;
+      margin: 20px 0;
+      padding: 0 15px;
+    }
     #skill-list {
       display: flex;
       justify-content: space-around;
@@ -218,10 +204,7 @@
         display: flex;
         margin: 0 auto;
         margin-bottom: 25px;
-      }
-      .skill-img img {
         width: 256px;
-        margin: 0 auto;
       }
       #icon-reference {
         text-align: center;
@@ -304,11 +287,9 @@
       font-size: 2em;
       padding: 50px 0;
     }
-
     footer h4 {
       margin-bottom: 15px;
     }
-
     #social-media-icons {
       text-align: center;
     }
@@ -330,7 +311,6 @@
         font-size: 1.4em;
         border-radius: 5%;
       }
-
 
     /* MEDIA QUERIES */
     /* JUMBOTRON GITHUB IMAGE FIX */
@@ -365,29 +345,21 @@
       #jumbo-content {
         display: block
       }
-        #section1 {
-          display: none;
+        #intro-message {
+          margin: 10px 0 15px 0;
         }
-
         #section2 {
           margin-top: 25px;
           text-align: center;
           width: 100%;
         }
-
-        #mobileview-pic {
-          display: inline;
-        }
-
         .tech-row img {
           width: 75px;
         }
-
         #bottom-arrow {
           width: 100%;
           text-align: center;
         }
-
       #appbox-one, #appbox-two {
         height: 350px;
         padding-bottom: 0;
@@ -404,10 +376,10 @@
         margin: 0;
       }
         #location {
-          padding: 0;
+          margin: 10px 0;
         }
         #intro-message {
-          margin-bottom: 5px;
+          margin: 10px 0;
         }
         #technologies {
           display: none;
@@ -415,20 +387,12 @@
           #mobile-techrow4 {
             margin: 7px 0 15px 0;
           }
-          #tech-open {
-            display: inline-block;
-          }
         #github-text{
           float: none;
           padding-top: 0;
           text-align: center;
         }
       #bottom-arrow {
-        display: none;
-      }
-
-      /* APP-BOXES */
-      #appbox-one, #appbox-two, #appbox-three {
         display: none;
       }
 
@@ -513,7 +477,6 @@
         display: none;
       }
     }
-
     </style>
   </template>
 </dom-module>

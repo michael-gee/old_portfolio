@@ -8,11 +8,11 @@ Project link here: https://portfolio-c4ab3.firebaseapp.com/
 
 ### Features include:
 
-* Lightning fast load time (even on mobile - 1508.5ms average)
+* Lightning fast load time
 * Works completely offline after application is cached on first load.
 * Fully responsive, works on all screen sizes
 * Secure Network Connection - HTTPS
-* Uses HTTP 2 to improve file load speed and efficiency
+* Uses HTTP/2 to improve file load speed and efficiency
 * Clean UI/UX
 * Mobile-friendly design
 * Splash screen on mobile devices
