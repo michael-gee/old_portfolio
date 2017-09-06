@@ -63,6 +63,7 @@
                     </div>
 
                     <div class="tech-row" id="tech-row3">
+                      <img src="../images/tech/vue.png" id="vue-icon" alt="Vue JS Icon">
                       <img src="../images/tech/node.png" alt="Node JS Icon">
                       <img src="../images/tech/gcp.png" alt="Google Cloud Platform Icon">
                     </div>
@@ -75,7 +76,7 @@
                 <iron-icon icon="ceg-icons:polymer"></iron-icon>
                 Technologies
               </paper-button>
-                <paper-dialog id="tech-openDialog" with-backdrop>
+                <paper-dialog style ="overflow: auto;" id="tech-openDialog" with-backdrop>
                   <dom-if if="[[_shouldRenderMobileElement]]">
                     <template>
                       <div class="tech-row">
@@ -93,6 +94,9 @@
                       <div class="tech-row" id="mobile-techrow4">
                         <img src="../images/tech/node.png" alt="Node JS Icon">
                         <img src="../images/tech/gcp.png" alt="Google Cloud Platform Icon">
+                      </div>
+                      <div class="tech-row">
+                        <img src="../images/tech/vue.png" id="vue-icon" alt="Vue JS Icon">
                       </div>
                     </template>
                   </dom-if>
@@ -192,7 +196,7 @@
           <div class="example">
             <div class="example-text">
               <h3>Chat-Box</h3>
-              <p>A multi-thread progressive web application that uses Polymer elements and Firebase to authenticate users and give them a fast and functional chat experience that works across all platforms.</p>
+              <p>A multi-thread chat application built with web components (Polymer library) and Firebase to authenticate users and give them a fast and functional chat experience that works across all platforms.</p>
             </div>
             <div class="example-img">
               <iron-image preload fade
@@ -205,7 +209,7 @@
           <div id="last-example" class="example">
             <div class="example-text">
               <h3>myProjects</h3>
-              <p>myProjects is a robust progressive web application built with web components, the Polymer library toolbox, Firebase, and other technologies that displays all of my past/current projects showing my understanding of the technologies in my stack. (stack shown at the top)</p>
+              <p>myProjects is a web application displaying all my current and past web development projects. It will be built using a combination of most of the individual technologies listed as icons in the header section of the page.</p>
             </div>
             <div class="example-img">
               <iron-image preload fade
