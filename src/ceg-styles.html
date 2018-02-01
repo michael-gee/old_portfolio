@@ -11,7 +11,7 @@
     }
     /*  MAIN HEADER */
     h1 {
-      font-size: 3.2em;
+      font-size: 2.8em;
     }
     /* SECTION HEADERS */
     h2 {
@@ -20,7 +20,7 @@
     }
     /* SECTION SUBHEADINGS */
     h3 {
-      font-size: 2.6em;
+      font-size: 2.4em;
     }
     /* PARAGRAPH FONT */
     p {
@@ -84,7 +84,7 @@
         }
     #intro {
       color: white;
-      padding: 15px;
+      padding: 5px 15px;
       background-color: rgba(0, 0, 0, .45);
       width: 80%;
       margin: 0 auto;
@@ -96,7 +96,7 @@
       }
       #intro-message {
         font-style: italic;
-        margin-bottom: 15px;
+        margin-bottom: 5px;
       }
       .intro-content {
         font-size: 2em;
@@ -110,13 +110,13 @@
         }
         #vue-icon {
           width: 80px;
-          padding-bottom: 5px;
+          padding: 0 13px 5px 13px;
         }
         #tech-row2 {
           margin-top: 3px;
         }
         #tech-row3 {
-          margin-top: -10px;
+          margin-top: 5px;
         }
       #tech-open{
         font-size: 1.6em;
@@ -124,9 +124,12 @@
         color: black;
       }
         #tech-openDialog {
-          background-color: rgba(255, 255, 255, 0.8);
-          border-radius: 10%;
+          background-color: rgba(255, 255, 255, 0.95);
+          border-radius: 10px;
         }
+      #location {
+        padding-top: 10px;
+      }
       #github {
         display: inline-block;
         color: white;
@@ -267,54 +270,40 @@
     }
 
     /* CONTACT SECTION */
+    #contact a {
+      text-decoration: none;
+    }
+    #resume-container {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 25px;
+    }
+    .contact-btn {
+      font-size: 2em;
+      width: 200px;
+      margin: 15px 15px 0px 15px;
+      background-color: #E5392B;
+      color: white;
+    }
+      .contact-btn iron-icon {
+          margin-right: 10px; 
+        }
     #contact-buttons {
       display: flex;
       justify-content: center;
-      margin-bottom: 2.5rem;
+      margin-bottom: 5rem;
     }
-      #contact-buttons a {
-        text-decoration: none;
+      #email-btn {
+        background-color: #545454;
       }
-      #contact-buttons paper-button {
-        font-size: 2em;
-        margin: 15px 15px 0px 15px;
-        background-color: black;
-        color: white;
+      #linkedin-btn {
+        background-color: #0086b6;
       }
-        #contact-buttons iron-icon {
-          margin-left: 7px;
-        }
-
-    /* FOOTER */
-    footer {
-      background-color: black;
-      color: white;
-      font-size: 2em;
-      padding: 50px 0;
-    }
-    footer h4 {
-      margin-bottom: 15px;
-    }
-    #social-media-icons {
-      text-align: center;
-    }
-      #social-media-icons a {
-        text-decoration: none;
+      #facebook-btn {
+        background-color: #3c66c4;
       }
-      #skype:hover, #email:hover {
-        cursor: pointer;
-      }
-      #social-media-icons img {
-        padding: 0px 5px;
-      }
-      .dialog-wrapper {
-        width: 39.23px;
-        height: 24px;
-      }
-      .social-dialog {
-        padding: 15px;
-        font-size: 1.4em;
-        border-radius: 5%;
+      #twitter-btn {
+        background-color: #33ccff;
       }
 
     /* MEDIA QUERIES */
@@ -392,9 +381,6 @@
         #technologies {
           display: none;
         }
-          #mobile-techrow4 {
-            margin: 7px 0 15px 0;
-          }
         #github-text{
           float: none;
           padding-top: 0;

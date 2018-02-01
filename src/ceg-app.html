@@ -45,27 +45,27 @@
                 </template>
               </dom-if>
               <h3>Software Developer</h3>
-              <p id="intro-message" class="intro-content">My passion is creating fully functional, modern, and progressive web applications.</p>
+              <p id="intro-message" class="intro-content">My passion is creating fully functional, modern, and progressive full stack JavaScript web applications.</p>
 
               <dom-if if="[[!_shouldRenderMobileElement]]">
                 <template>
                   <div id="technologies">
                     <div class="tech-row" id="tech-row1">
-                      <img src="../images/tech/html.png" alt="HTML 5 Icon">
-                      <img src="../images/tech/css.png" alt="CSS 3 Icon">
-                      <img src="../images/tech/javascript.png" alt="JavaScript Icon">
+                      <img src="../images/tech/react.png" alt="React.js Logo Icon">
+                      <img src="../images/tech/node.png" alt="Node JS Logo Icon">
+                      <img src="../images/tech/mongodb.png" alt="MongoDB Logo Icon">
                     </div>
 
                     <div class="tech-row" id="tech-row2">
-                      <img src="../images/tech/polymer.png" alt="Polymer Icon">
-                      <img src="../images/tech/firebase.svg" alt="Firebase Icon">
-                      <img src="../images/tech/sass.png" alt="SASS Icon">
+                      <img src="../images/tech/html.png" alt="HTML 5 Logo Icon">
+                      <img src="../images/tech/css.png" alt="CSS 3 Logo Icon">
+                      <img src="../images/tech/javascript.png" alt="JavaScript Logo Icon">
                     </div>
 
                     <div class="tech-row" id="tech-row3">
-                      <img src="../images/tech/vue.png" id="vue-icon" alt="Vue JS Icon">
-                      <img src="../images/tech/node.png" alt="Node JS Icon">
-                      <img src="../images/tech/gcp.png" alt="Google Cloud Platform Icon">
+                      <img src="../images/tech/polymer.png" alt="Polymer Logo Icon">
+                      <img src="../images/tech/vue.png" id="vue-icon" alt="Vue JS Logo Icon">   
+                      <img src="../images/tech/firebase.svg" alt="Firebase Logo Icon">
                     </div>
                   </div>
                 </template>
@@ -80,22 +80,23 @@
                   <dom-if if="[[_shouldRenderMobileElement]]">
                     <template>
                       <div class="tech-row">
+                        <img src="../images/tech/react.png" alt="React.js Logo Icon">
+                        <img src="../images/tech/node.png" alt="Node JS Logo Icon">
+                      </div>
+                      <div class="tech-row">
                         <img src="../images/tech/html.png" alt="HTML 5 Icon">
                         <img src="../images/tech/css.png" alt="CSS 3 Icon">
                       </div>
                       <div class="tech-row">
                         <img src="../images/tech/javascript.png" alt="JavaScript Icon">
-                        <img src="../images/tech/polymer.png" alt="Polymer Icon">
+                        <img src="../images/tech/mongodb.png" alt="MongoDB Logo Icon">
                       </div>
                       <div class="tech-row">
                         <img src="../images/tech/firebase.svg" alt="Firebase Icon">
                         <img src="../images/tech/sass.png" alt="Sass Icon">
                       </div>
-                      <div class="tech-row" id="mobile-techrow4">
-                        <img src="../images/tech/node.png" alt="Node JS Icon">
-                        <img src="../images/tech/gcp.png" alt="Google Cloud Platform Icon">
-                      </div>
                       <div class="tech-row">
+                        <img src="../images/tech/polymer.png" alt="Polymer Icon">
                         <img src="../images/tech/vue.png" id="vue-icon" alt="Vue JS Icon">
                       </div>
                     </template>
@@ -134,7 +135,7 @@
               alt="Building Skill Icon">
             </iron-image>
             <h3>Developing</h3>
-            <p>With a strong foundational knowledge of HTML5, CSS3, and JavaScript(es6), the Vue.js framework (also familiar with Angular and React), web components (Polymer) and Firebase I specialize in building progressive web applications and custom web components. I strive to create everything I build with new state of the art features, heading towards the future of mobile web development.</p>
+            <p>With a proficient level knowledge of JavaScript, I use it on both the client and server side of applications using React.js & Node.js along with a strong foundational knowledge of HTML & CSS to build out full stack web applications with a structured and well organized backend API connected to a MongoDB (NoSQL) database with a responsive and elegant user interface. </p>
           </div>
           <div class="skill">
             <iron-image preload fade
@@ -143,7 +144,7 @@
               alt="UI/UX Skill Icon">
             </iron-image>
             <h3>UI/UX</h3>
-            <p>With over a year of experience with HTML and CSS I make it a top priority to make every application fully responsive and clean across all platforms. I use my strong foundational knowledge in CSS (with SCSS) and the use of Google Material Design to create beautiful and simple <strong>User Interfaces</strong>. I strongly believe a good <strong>User Experience</strong> is the backbone of any successful application.</p>
+            <p>With almost a year of experience with creating React.js components with JSX and HTML/CSS I make it a top priority to make every application fully responsive, accessible, and tested across all platforms. I heavily emphasize an elegant and user-focused UI/UX with an organized component structure used with front end best practices in every application.</p>
           </div>
           <div class="skill">
             <iron-image preload fade
@@ -152,7 +153,7 @@
               alt="Innovating Skill Icon">
             </iron-image>
             <h3>Innovating</h3>
-            <p>Having the ability to be creative and problem solve are just as important (if not more) than your ability to code. I take pride in not only being able to solve existing problems, but creating new ideas to solve problems before they can even happen. I strive to innovate and constantly improve to stay ahead of the curve to build and create things people have never seen before.</p>
+            <p>Having the ability to be creative and problem solve are just as important than your ability to code. I take pride in not only being able to solve existing problems, but planning out strategies to prevent any future problems or bug fixing. I strive to innovate and constantly improve my web development skills to stay ahead of the curve in the industry.</p>
           </div>
         </div><!-- SKILL LIST DIV END -->
 
@@ -171,13 +172,13 @@
 
       <dom-if if="[[!_shouldRenderMobileElement]]">
         <template>
-          <app-box id="appbox-one"></app-box>
+          <app-box id="appbox-two"></app-box>
         </template>
       </dom-if>
 
       <section id="projects">
-        <h2>My Work</h2>
-        <p style="margin-bottom:0;">A majority of my projects can be found on my <a href="https://github.com/michaelgee22" target="_blank">Github</a></p>
+        <h2>Portfolio</h2>
+        <p style="margin-bottom:0;">A majority of my projects can be found on my <a href="https://github.com/michaelgee22" target="_blank">Github</a></p>   
 
         <div id="examples">
           <div id="first-example" class="example">
@@ -237,67 +238,54 @@
 
       <dom-if if="[[!_shouldRenderMobileElement]]">
         <template>
-          <app-box id="appbox-two"></app-box>
+          <app-box id="appbox-one"></app-box>
         </template>
       </dom-if>
 
       <section id="contact">
-        <h2>Contact Me</h2>
-        <p>Interested in hiring me or want to discuss a project? Click the button below!</p>
+        <h2>Other Resources</h2>
 
-        <div id="contact-buttons">
-          <a href="https://www.michaelgee.me/contact/" target="_blank">
-            <paper-button raised>
-              Contact Me
-              <iron-icon icon="ceg-icons:email"></iron-icon>
+        <div id="resume-container">
+          <a href="https://drive.google.com/file/d/11aq3dfTeJMQqf2S_4pNfG9rlEb6-l9ni/view?ths=true" target="_blank">
+            <paper-button class="contact-btn" raised>
+              <iron-icon icon="ceg-icons:book"></iron-icon>
+              View Resume
             </paper-button>
           </a>
-          <div id="contact-buttons">
-            <a href="https://www.michaelgee.me/wp-content/uploads/2017/10/Michaels-R%C3%A9sum%C3%A9.pdf" target="_blank">
-              <paper-button raised>
-                View Résumé
-                <iron-icon icon="ceg-icons:book"></iron-icon>
-              </paper-button>
-            </a>
         </div>
-      </section>
 
-      <footer>
-        <h4>Hand Coded by Michael Gee &#169; 2017</h4>
+        <p>Interested in hiring me or want to discuss a project? Get in touch through any of the various links below!</p>
 
-        <div id="social-media-icons">
-          <a href="https://www.instagram.com/michaelgee7/" target="_blank">
-            <img src="../images/social-media/instagram.png" alt="Instagram Icon">
-          </a>
-          <a href="https://www.facebook.com/michael.gee.167" target="_blank">
-            <img src="../images/social-media/facebook.png" alt="Facebook Icon">
+        <div id="contact-buttons">
+          <a href="https://drive.google.com/file/d/11aq3dfTeJMQqf2S_4pNfG9rlEb6-l9ni/view?ths=true" target="_blank">
+            <paper-button id="email-btn" class="contact-btn" raised>
+              <iron-icon icon="ceg-icons:email"></iron-icon>
+              Contact
+            </paper-button>
           </a>
           <a href="https://www.linkedin.com/in/michael-gee/" target="_blank">
-            <img src="../images/social-media/linkedin.png" alt="LinkedIn Icon">
+            <paper-button id="linkedin-btn" class="contact-btn" raised>
+              <iron-icon icon="ceg-icons:linkedin"></iron-icon>
+              LinkedIn
+            </paper-button>
           </a>
-          <span class="dialog-wrapper">
-            <img id="email" src="../images/social-media/gmail.png" on-tap="openDialog" alt="G Mail Icon">
-            <paper-dialog id="emailDialog" with-backdrop>
-              <div class="social-dialog">michaelgee221@gmail.com</div>
-            </paper-dialog>
-          </span>
+          <a href="https://www.facebook.com/michael.gee.167" target="_blank">
+            <paper-button id="facebook-btn" class="contact-btn" raised>
+              <iron-icon icon="ceg-icons:facebook"></iron-icon>
+              Facebook
+            </paper-button>
+          </a>
           <a href="https://twitter.com/michaelgee7" target="_blank">
-            <img src="../images/social-media/twitter.png" alt="Twitter Icon">
-          </a>
-          <span class="dailog-wrapper">
-            <img id="skype" src="../images/social-media/skype.png" on-tap="openDialog" alt="Skype Icon">
-            <paper-dialog id="skypeDialog" with-backdrop>
-              <div class="social-dialog">michael.gee24</div>
-            </paper-dialog>
-          </span>
-          <a href="https://www.michaelgee.me/" target="_blank">
-            <img src="../images/social-media/wordpress.png" alt="Wordpress Icon">
-          </a>
-          <a href="https://github.com/michaelgee22" target="_blank">
-            <img src="../images/social-media/github.png" alt="Github Icon">
+            <paper-button id="twitter-btn" class="contact-btn" raised>
+              <iron-icon icon="ceg-icons:twitter"></iron-icon>
+              Twitter
+            </paper-button>
           </a>
         </div>
-      </footer>
+
+        
+
+      </section>
     </div><!-- CONTAINER DIV END -->
   </template>
 
