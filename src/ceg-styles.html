@@ -150,7 +150,7 @@
         }
       #bottom-arrow {
         display: inline-block;
-        color: lightgray;
+        color: white;
         cursor: pointer;
         text-align: center;
         bottom: 1.5%;
@@ -159,6 +159,12 @@
       }
         #bottom-arrow:hover {
           color: white;
+        }
+        #bottom-icon {
+          background-color: black; 
+          padding: 10px;
+          opacity: .55; 
+          border-radius: 50%;
         }
 
     /* APP-BOXES */
@@ -291,7 +297,7 @@
     #contact-buttons {
       display: flex;
       justify-content: center;
-      margin-bottom: 5rem;
+      margin-bottom: 2rem;
     }
       #email-btn {
         background-color: #545454;
@@ -304,6 +310,15 @@
       }
       #twitter-btn {
         background-color: #33ccff;
+      }
+
+      #back-to-top-btn {
+        background-color: #E5392B;
+        color: white;
+        border-radius: 50%;
+        padding: 15px;
+        margin: 0 25px 25px 0;
+        float: right;
       }
 
     /* MEDIA QUERIES */
@@ -357,10 +372,21 @@
           width: 100%;
           text-align: center;
         }
+          #bottom-icon {
+            background-color: white;
+            color: black; 
+            padding: 10px;
+            opacity: .95; 
+            border-radius: 50%;
+          }
       #appbox-one, #appbox-two {
         height: 350px;
         padding-bottom: 0;
         margin-top: 0;
+      }
+      #contact-buttons {
+        flex-direction: column;
+        margin-bottom: 2rem;
       }
     }
 
@@ -386,9 +412,13 @@
           padding-top: 0;
           text-align: center;
         }
-      #bottom-arrow {
-        display: none;
+      #contact {
+        border-bottom: none;
       }
+        #contact-buttons {
+          border-bottom: none;
+          margin: 0;
+        }
 
       /* EXPERTISE SECTION */
       #skill-list {
@@ -423,10 +453,6 @@
       }
 
       /* CONTACT SECTION */
-      #contact-buttons {
-        flex-direction: column;
-        margin-bottom: 2rem;
-      }
         #contact-buttons a {
           text-align: center;
         }

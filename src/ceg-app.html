@@ -73,7 +73,7 @@
 
               <!-- TECHNOLOGIES BUTTON ONLY SHOWN ON MOBILE -->
               <paper-button id="tech-open" on-tap="openDialog" raised hidden$="[[!_shouldRenderMobileElement]]">
-                <iron-icon icon="ceg-icons:polymer"></iron-icon>
+                <iron-icon style="margin-right: 3px;" icon="ceg-icons:javascript"></iron-icon>
                 Technologies
               </paper-button>
                 <paper-dialog style ="overflow: auto;" id="tech-openDialog" with-backdrop>
@@ -116,8 +116,7 @@
           </div><!-- SECTION 2 DIV END -->
 
           <div id="bottom-arrow" on-tap="pageScroll">
-              <p>View My Portfolio</p>
-              <iron-icon icon="ceg-icons:keyboard-arrow-down"></iron-icon>
+            <iron-icon id="bottom-icon" icon="ceg-icons:keyboard-arrow-down"></iron-icon>
           </div>
 
         </div><!-- JUMBOTRON CONTENT -->
@@ -282,9 +281,10 @@
             </paper-button>
           </a>
         </div>
-
-        
-
+      
+        <paper-button on-tap="pageScroll" id="back-to-top-btn">
+          <iron-icon icon="ceg-icons:keyboard-arrow-up"></iron-icon>
+        </paper-button>
       </section>
     </div><!-- CONTAINER DIV END -->
   </template>
@@ -315,14 +315,20 @@
         return mobileScreen;
       }
 
-      pageScroll(){
-        var section = this.$['expertise'];
+      pageScroll(e){
+        let scrollDestination;
 
-        section.scrollIntoView({block: "start", behavior: "smooth"});
+        if (e.currentTarget === this.$['bottom-arrow']) {
+          scrollDestination = this.$['expertise'];
+        } else if(e.currentTarget === this.$['back-to-top-btn']) {
+          scrollDestination = this.$['container'];
+        }
+
+        scrollDestination.scrollIntoView({block: "start", behavior: "smooth"});
       }
 
       openDialog(e) {
-        var dialog = e.currentTarget.id;
+        let dialog = e.currentTarget.id;
         dialog = dialog + "Dialog";
 
         this.$[dialog].open();
