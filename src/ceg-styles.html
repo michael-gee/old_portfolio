@@ -4,150 +4,192 @@
 <dom-module id="ceg-styles">
   <template>
     <style>
-    /* HEADINGS */
-    h1, h2, h3, h4, h5, h6 {
-      margin: 0;
-      text-align: center;
-    }
-    /*  MAIN HEADER */
-    h1 {
-      font-size: 2.8em;
-    }
-    /* SECTION HEADERS */
-    h2 {
-      font-size: 3.2em;
-      margin-top: 3rem;
-    }
-    /* SECTION SUBHEADINGS */
-    h3 {
-      font-size: 2.4em;
-    }
-    /* PARAGRAPH FONT */
-    p {
-      margin: 0;
-      font-size: 1.6em;
-    }
-    /* IMAGES */
-    img, iron-image {
-      max-width: 100%;
-      --iron-image-width: 100%;
-    }
-    /* LINKS */
-    a {
-      color: #093D55;
-      text-decoration: underline;
-    }
+      /* HEADINGS */
+
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
+        margin: 0;
+        text-align: center;
+      }
+
+      /*  MAIN HEADER */
+
+      h1 {
+        font-size: 2.8em;
+      }
+
+      /* SECTION HEADERS */
+
+      h2 {
+        font-size: 3.2em;
+        margin-top: 3rem;
+      }
+
+      /* SECTION SUBHEADINGS */
+
+      h3 {
+        font-size: 2.4em;
+      }
+
+      /* PARAGRAPH FONT */
+
+      p {
+        margin: 0;
+        font-size: 1.6em;
+      }
+
+      /* IMAGES */
+
+      img,
+      iron-image {
+        max-width: 100%;
+        --iron-image-width: 100%;
+      }
+
+      /* LINKS */
+
+      a {
+        color: #093D55;
+        text-decoration: underline;
+      }
+
       a:hover {
         color: red;
         text-decoration: underline;
       }
-    [hidden] {
-      display: none !important;
-    }
 
-    /* CONTAINER */
-    #container {
-      width: 100%;
-    }
+      [hidden] {
+        display: none !important;
+      }
 
-    /* JUMBOTRON SECTION */
-    #jumbotron {
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-      position: relative;
-      background-color: #2A3A3F;
-      background-size: cover;
-      background-position: center center;
-      background-repeat: no-repeat;
-      background-image:
-      linear-gradient(
-                    rgba(0, 0, 0, .25),
-                    rgba(0, 0, 0, .25)
-                    ),
-      url('../images/layout/mainbg.jpg');
-    }
+      /* CONTAINER */
+
+      #container {
+        width: 100%;
+      }
+
+      /* JUMBOTRON SECTION */
+
+      #jumbotron {
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        background-color: #2A3A3F;
+        background-size: cover;
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-image: linear-gradient( rgba(0, 0, 0, .25),
+        rgba(0, 0, 0, .25)),
+        url('../images/layout/mainbg.jpg');
+      }
+
       #jumbo-content {
         min-height: 100vh;
         display: flex;
         justify-content: center;
       }
-        #section1, #section2 {
-          width: 50%;
-          text-align: center;
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
-        }
-        #portfolio-image {
-          border-radius: 50%;
-        }
-    #intro {
-      color: white;
-      padding: 5px 15px;
-      background-color: rgba(0, 0, 0, .45);
-      width: 80%;
-      margin: 0 auto;
-      border-radius: 5%;
-    }
+
+      #section1,
+      #section2 {
+        width: 50%;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
+
+      #portfolio-image {
+        border-radius: 50%;
+      }
+
+      #intro {
+        color: white;
+        padding: 5px 15px;
+        background-color: rgba(0, 0, 0, .45);
+        width: 80%;
+        margin: 0 auto;
+        border-radius: 5%;
+      }
+
       #mobileview-pic {
         width: 150px;
         border-radius: 50%;
       }
+
       #intro-message {
         font-style: italic;
         margin-bottom: 5px;
       }
+
       .intro-content {
         font-size: 2em;
       }
+
       .tech-row {
         max-width: 100%;
       }
-        .tech-row img {
-          margin: 0 5px;
-          width: 100px;
-        }
-        #vue-icon {
-          width: 80px;
-          padding: 0 13px 5px 13px;
-        }
-        #tech-row2 {
-          margin-top: 3px;
-        }
-        #tech-row3 {
-          margin-top: 5px;
-        }
-      #tech-open{
+
+      .tech-row img {
+        margin: 0 5px;
+        width: 100px;
+      }
+
+      #vue-icon {
+        width: 80px;
+        padding: 0 13px 5px 13px;
+      }
+
+      #tech-row2 {
+        margin-top: 3px;
+      }
+
+      #tech-row3 {
+        margin-top: 5px;
+      }
+
+      #tech-open {
         font-size: 1.6em;
         background-color: white;
         color: black;
       }
-        #tech-openDialog {
-          background-color: rgba(255, 255, 255, 0.95);
-          border-radius: 10px;
-        }
+
+      #tech-openDialog {
+        background-color: rgba(255, 255, 255, 0.95);
+        border-radius: 10px;
+      }
+
       #location {
         padding-top: 10px;
       }
+
       #github {
         display: inline-block;
         color: white;
       }
-        #github a {
-          color: white;
-        }
-          #github a:hover {
-            color: red;
-          }
-        #github-text {
-          float: left;
-          padding-top: 20px;
-        }
-        #github-image {
-          width: 75px;
-          float: left;
-        }
+
+      #github a {
+        color: white;
+      }
+
+      #github a:hover {
+        color: red;
+      }
+
+      #github-text {
+        float: left;
+        padding-top: 20px;
+      }
+
+      #github-image {
+        width: 75px;
+        float: left;
+      }
+
       #bottom-arrow {
         display: inline-block;
         color: white;
@@ -157,157 +199,216 @@
         padding: 20px 0;
         position: absolute;
       }
-        #bottom-arrow:hover {
-          color: white;
-        }
-        #bottom-icon {
-          background-color: black; 
-          padding: 10px;
-          opacity: .55; 
-          border-radius: 50%;
-        }
 
-    /* APP-BOXES */
-    #appbox-one, #appbox-two {
-      height: 500px;
-    }
+      #bottom-arrow:hover {
+        color: white;
+      }
+
+      #bottom-icon {
+        background-color: black;
+        padding: 10px;
+        opacity: .55;
+        border-radius: 50%;
+      }
+
+      /* APP-BOXES */
+
+      #appbox-one,
+      #appbox-two {
+        height: 500px;
+      }
+
       #appbox-one {
         --app-box-background-front-layer: {
-        background-image:
-        linear-gradient(
-                      rgba(0, 0, 100, .25),
-                      rgba(0, 0, 100, .25)
-                      ),
-        url("../images/layout/new-york.jpg");
-        background-position: bottom;
-        height: 100%;
-        };
+          background-image: linear-gradient( rgba(0, 0, 100, .25),
+          rgba(0, 0, 100, .25)),
+          url("../images/layout/new-york.jpg");
+          background-position: bottom;
+          height: 100%;
+        }
+        ;
       }
 
       #appbox-two {
         --app-box-background-front-layer: {
-        background-image:
-        linear-gradient(
-                      rgba(200, 0, 0, .15),
-                      rgba(200, 0, 0, .15)
-                      ),
-        url("../images/layout/comp-setup.png");
-        background-position: center;
-        height: 100%;
-        };
+          background-image: linear-gradient( rgba(200, 0, 0, .15),
+          rgba(200, 0, 0, .15)),
+          url("../images/layout/comp-setup.png");
+          background-position: center;
+          height: 100%;
+        }
+        ;
       }
 
-    /* MY EXPERTISE SECTION */
-    #expertise p, #projects p, #contact p {
-      text-align: center;
-      font-size: 1.8em;
-      margin: 20px 0;
-      padding: 0 15px;
-    }
-    #skill-list {
-      display: flex;
-      justify-content: space-around;
-    }
+      /* MY EXPERTISE SECTION */
+
+      #expertise p,
+      #projects p,
+      #contact p {
+        text-align: center;
+        font-size: 1.8em;
+        margin: 20px 0;
+        padding: 0 15px;
+      }
+
+      #skill-list {
+        display: flex;
+        justify-content: space-around;
+      }
+
       .skill {
         width: 30%;
         padding: 1%;
         margin-bottom: 2rem;
       }
+
       .skill-img {
         display: flex;
         margin: 0 auto;
         margin-bottom: 25px;
         width: 256px;
       }
+
       #icon-reference {
         text-align: center;
         margin-bottom: 3rem;
       }
-        #icon-reference p{
-          text-decoration: underline;
-          display: inline-block;
-          color: #093D55;
-          margin: 0;
-        }
-          #icon-reference p:hover {
-            cursor: pointer;
-            color: red;
-          }
-        #icon-openDialog div {
-          font-size: 1.4em;
-        }
-        #icon-openDialog a{
-          color: red;
-          text-decoration: none;
-        }
-          #icon-openDialog a:hover{
-            text-decoration: underline;
-          }
 
-    /* MY WORK SECTION */
-    .example {
-      width: 100%;
-      display: flex;
-      border-bottom: 1px solid #ccc;
-    }
-      #last-example {
-        border-bottom: none;
+      #icon-reference p {
+        text-decoration: underline;
+        display: inline-block;
+        color: #093D55;
+        margin: 0;
       }
-      .example-text, .example-img {
-        width: 50%;
-        padding: 70px 25px;
+
+      #icon-reference p:hover {
+        cursor: pointer;
+        color: red;
       }
-      .example-text{
+
+      #icon-openDialog div {
+        font-size: 1.4em;
+      }
+
+      #icon-openDialog a {
+        color: red;
+        text-decoration: none;
+      }
+
+      #icon-openDialog a:hover {
+        text-decoration: underline;
+      }
+
+      /* MY WORK SECTION */
+
+      #examples {
         display: flex;
-        flex-direction: column;
         justify-content: center;
+        flex-wrap: wrap;
+        margin: 25px 0;
       }
-      .example-img iron-image{
-        max-width: 400px;
-        display: flex;
-        margin: 0 auto;
-        border-radius: 5px;
-      }
-    #project-links {
-      text-align: center;
-      font-size: 1.6em;
-      margin-top: 10px;
-      margin-bottom: 3rem;
-    }
 
-    /* CONTACT SECTION */
-    #contact a {
-      text-decoration: none;
-    }
-    #resume-container {
-      display: flex;
-      justify-content: center;
-      margin-bottom: 25px;
-    }
-    .contact-btn {
-      font-size: 2em;
-      width: 200px;
-      margin: 15px 15px 0px 15px;
-      background-color: #E5392B;
-      color: white;
-    }
+      .example {
+        max-width: 100%;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        margin: 0 15px 25px 15px;
+      }
+
+      .example-img {
+        width: 303px;
+        max-width: 100%;
+        margin: 0 auto;
+        border-top-left-radius: 5px;
+        border-top-right-radius: 5px;
+      }
+
+      .example-body {
+        width: 300px;
+        max-width: 100%;
+        margin: 0 auto;
+        border: 2px solid #eee;
+      }
+
+      .example-title {
+        font-size: 2em;
+        text-align: center;
+        padding: 5px 0;
+      }
+
+      .example hr {
+        margin: 5px 15px;
+      }
+
+      .example-buttons {
+        display: flex;
+        font-size: 1.6em;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 25px;
+      }
+
+      .btn-link,
+      .btn-link:hover {
+        text-decoration: none;
+      }
+
+      .view-btn {
+        background-color: #E5392B;
+        color: white;
+      }
+
+      .collapse-text {
+        font-size: 1.6em;
+        background-color: #eee;
+        width: 284px;
+        padding: 10px;
+        text-align: center;
+      }
+
+      /* CONTACT SECTION */
+
+      #contact a {
+        text-decoration: none;
+      }
+
+      #resume-container {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 25px;
+      }
+
+      .contact-btn {
+        font-size: 2em;
+        width: 200px;
+        margin: 15px 15px 0px 15px;
+        background-color: #E5392B;
+        color: white;
+      }
+
       .contact-btn iron-icon {
-          margin-right: 10px; 
-        }
-    #contact-buttons {
-      display: flex;
-      justify-content: center;
-      margin-bottom: 2rem;
-    }
+        margin-right: 10px;
+      }
+
+      #contact-buttons {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 2rem;
+      }
+
       #email-btn {
         background-color: #545454;
       }
+
       #linkedin-btn {
         background-color: #0086b6;
       }
+
       #facebook-btn {
         background-color: #3c66c4;
       }
+
       #twitter-btn {
         background-color: #33ccff;
       }
@@ -321,39 +422,41 @@
         float: right;
       }
 
-    /* MEDIA QUERIES */
-    /* JUMBOTRON GITHUB IMAGE FIX */
-    @media screen and (max-width: 1125px) {
-      #github {
-        display: block;
-      }
-        #github-text, #github-image {
+      /* MEDIA QUERIES */
+
+      /* JUMBOTRON GITHUB IMAGE FIX */
+
+      @media screen and (max-width: 1125px) {
+        #github {
+          display: block;
+        }
+        #github-text,
+        #github-image {
           float: none;
         }
-    }
-    /* TABLET */
-    @media screen and (max-width: 960px) {
-      /* JUMBOTRON  */
-      #jumbotron {
-        background-image:
-        linear-gradient(
-                      rgba(0, 0, 0, .45),
-                      rgba(0, 0, 0, .45)
-                      ),
-        url('../images/layout/mainbg.jpg');
       }
-      #section2 {
-        margin: 0;
-      }
-      #intro {
-        padding: 0;
-        margin: 0;
-        width: 100%;
-        background-color: transparent;
-      }
-      #jumbo-content {
-        display: block
-      }
+
+      /* TABLET */
+
+      @media screen and (max-width: 960px) {
+        /* JUMBOTRON  */
+        #jumbotron {
+          background-image: linear-gradient( rgba(0, 0, 0, .45),
+          rgba(0, 0, 0, .45)),
+          url('../images/layout/mainbg.jpg');
+        }
+        #section2 {
+          margin: 0;
+        }
+        #intro {
+          padding: 0;
+          margin: 0;
+          width: 100%;
+          background-color: transparent;
+        }
+        #jumbo-content {
+          display: block
+        }
         #intro-message {
           margin: 10px 0 15px 0;
         }
@@ -365,43 +468,45 @@
         .tech-row img {
           width: 75px;
         }
-          #vue-icon {
-            width: 60px;
-          }
+        #vue-icon {
+          width: 60px;
+        }
         #bottom-arrow {
           width: 100%;
           text-align: center;
         }
-          #bottom-icon {
-            background-color: white;
-            color: black; 
-            padding: 10px;
-            opacity: .95; 
-            border-radius: 50%;
-          }
-      #appbox-one, #appbox-two {
-        height: 350px;
-        padding-bottom: 0;
-        margin-top: 0;
+        #bottom-icon {
+          background-color: white;
+          color: black;
+          padding: 10px;
+          opacity: .95;
+          border-radius: 50%;
+        }
+        #appbox-one,
+        #appbox-two {
+          height: 350px;
+          padding-bottom: 0;
+          margin-top: 0;
+        }
+        #contact-buttons {
+          flex-direction: column;
+          margin-bottom: 2rem;
+        }
       }
-      #contact-buttons {
-        flex-direction: column;
-        margin-bottom: 2rem;
-      }
-    }
 
-    /* PHONE */
-    @media screen and (max-width: 736px) {
-      #bottom-icon {
-        float: right;
-        right: 3%;
-      }
-      section {
-        border-bottom: 1px solid #ccc;
-      }
-      #section2 {
-        margin: 0;
-      }
+      /* PHONE */
+
+      @media screen and (max-width: 736px) {
+        #bottom-icon {
+          float: right;
+          right: 3%;
+        }
+        section {
+          border-bottom: 1px solid #ccc;
+        }
+        #section2 {
+          margin: 0;
+        }
         #location {
           margin: 10px 0;
         }
@@ -411,52 +516,37 @@
         #technologies {
           display: none;
         }
-        #github-text{
+        #github-text {
           float: none;
           padding-top: 0;
           text-align: center;
         }
-      #contact {
-        border-bottom: none;
-      }
+        #contact {
+          border-bottom: none;
+        }
         #contact-buttons {
           border-bottom: none;
           margin: 0;
         }
 
-      /* EXPERTISE SECTION */
-      #skill-list {
-        display: block;
-      }
-      .skill {
-        width: 100%;
-        padding: 0;
-      }
+        /* EXPERTISE SECTION */
+        #skill-list {
+          display: block;
+        }
+        .skill {
+          width: 100%;
+          padding: 0;
+        }
         .skill p {
           padding: 0 15px;
         }
 
-      /* MY WORK SECTION */
-      .example {
-        display: block;
-      }
-        .example h3 {
-          margin-top: 20px;
+        /* MY WORK SECTION */
+        .example-body {
+          width: calc(100% - 4px);
         }
-        .example-text, .example-img {
-          width: 100%;
-          padding: 0;
-        }
-        .example-img {
-          width: 97%;
-          margin: 0 auto;
-          margin-bottom: 20px;
-        }
-      #project-links {
-        margin-top: 40px;
-      }
 
-      /* CONTACT SECTION */
+        /* CONTACT SECTION */
         #contact-buttons a {
           text-align: center;
         }
@@ -464,40 +554,37 @@
           width: 60%;
           margin: 20px 0px;
         }
-    }
+      }
 
-    /* SMALL PHONE QUERIES (IPHONE 5) */
-    @media screen and (max-width: 360px) {
-      #github-text {
-        padding: 0;
-      }
-      .intro-content {
-        font-size: 1.8em;
-      }
-    }
+      /* SMALL PHONE QUERIES (IPHONE 5) */
 
-    /* PHONE IN LANDSCAPE MODE */
-    @media screen
-    and (max-width: 750px)
-    and (orientation: landscape) {
-      #jumbotron {
-        background-image:
-        linear-gradient(
-                      rgba(0, 0, 0, .45),
-                      rgba(0, 0, 0, .45)
-                      ),
-        url('../images/layout/mainbg.jpg');
+      @media screen and (max-width: 360px) {
+        #github-text {
+          padding: 0;
+        }
+        .intro-content {
+          font-size: 1.8em;
+        }
       }
-      #intro {
-        padding: 0;
-        margin: 0;
-        width: 100%;
-        background-color: transparent;
+
+      /* PHONE IN LANDSCAPE MODE */
+
+      @media screen and (max-width: 750px) and (orientation: landscape) {
+        #jumbotron {
+          background-image: linear-gradient( rgba(0, 0, 0, .45),
+          rgba(0, 0, 0, .45)),
+          url('../images/layout/mainbg.jpg');
+        }
+        #intro {
+          padding: 0;
+          margin: 0;
+          width: 100%;
+          background-color: transparent;
+        }
+        #bottom-arrow {
+          display: none;
+        }
       }
-      #bottom-arrow {
-        display: none;
-      }
-    }
     </style>
   </template>
 </dom-module>

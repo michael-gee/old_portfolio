@@ -5,13 +5,15 @@
 <link rel="import" href="../bower_components/app-layout/app-box/app-box.html">
 <!-- PAPER ELEMENTS -->
 <link rel="import" href="../bower_components/paper-button/paper-button.html">
+<link rel="import" href="../bower_components/paper-icon-button/paper-icon-button.html">
 <link rel="import" href="../bower_components/paper-dialog/paper-dialog.html">
 <!-- IRON ELEMETS -->
 <link rel="import" href="../bower_components/iron-image/iron-image.html">
+<link rel="import" href="../bower_components/iron-collapse/iron-collapse.html">
 <link rel="import" href="../bower_components/iron-media-query/iron-media-query.html">
 <!-- CUSTOM ELEMENTS -->
-<link rel="import" href="ceg-styles.html">
 <link rel="import" href="ceg-icons.html">
+<link rel="import" href="ceg-styles.html">
 
 <dom-module id="ceg-app">
   <template>
@@ -64,7 +66,7 @@
 
                     <div class="tech-row" id="tech-row3">
                       <img src="../images/tech/polymer.png" alt="Polymer Logo Icon">
-                      <img src="../images/tech/vue.png" id="vue-icon" alt="Vue JS Logo Icon">   
+                      <img src="../images/tech/vue.png" id="vue-icon" alt="Vue JS Logo Icon">
                       <img src="../images/tech/firebase.svg" alt="Firebase Logo Icon">
                     </div>
                   </div>
@@ -76,32 +78,32 @@
                 <iron-icon style="margin-right: 3px;" icon="ceg-icons:javascript"></iron-icon>
                 Technologies
               </paper-button>
-                <paper-dialog style ="overflow: auto;" id="tech-openDialog" with-backdrop>
-                  <dom-if if="[[_shouldRenderMobileElement]]">
-                    <template>
-                      <div class="tech-row">
-                        <img src="../images/tech/react.png" alt="React.js Logo Icon">
-                        <img src="../images/tech/node.png" alt="Node JS Logo Icon">
-                      </div>
-                      <div class="tech-row">
-                        <img src="../images/tech/html.png" alt="HTML 5 Icon">
-                        <img src="../images/tech/css.png" alt="CSS 3 Icon">
-                      </div>
-                      <div class="tech-row">
-                        <img src="../images/tech/javascript.png" alt="JavaScript Icon">
-                        <img src="../images/tech/mongodb.png" alt="MongoDB Logo Icon">
-                      </div>
-                      <div class="tech-row">
-                        <img src="../images/tech/firebase.svg" alt="Firebase Icon">
-                        <img src="../images/tech/sass.png" alt="Sass Icon">
-                      </div>
-                      <div class="tech-row">
-                        <img src="../images/tech/polymer.png" alt="Polymer Icon">
-                        <img src="../images/tech/vue.png" id="vue-icon" alt="Vue JS Icon">
-                      </div>
-                    </template>
-                  </dom-if>
-                </paper-dialog>
+              <paper-dialog style="overflow: auto;" id="tech-openDialog" with-backdrop>
+                <dom-if if="[[_shouldRenderMobileElement]]">
+                  <template>
+                    <div class="tech-row">
+                      <img src="../images/tech/react.png" alt="React.js Logo Icon">
+                      <img src="../images/tech/node.png" alt="Node JS Logo Icon">
+                    </div>
+                    <div class="tech-row">
+                      <img src="../images/tech/html.png" alt="HTML 5 Icon">
+                      <img src="../images/tech/css.png" alt="CSS 3 Icon">
+                    </div>
+                    <div class="tech-row">
+                      <img src="../images/tech/javascript.png" alt="JavaScript Icon">
+                      <img src="../images/tech/mongodb.png" alt="MongoDB Logo Icon">
+                    </div>
+                    <div class="tech-row">
+                      <img src="../images/tech/firebase.svg" alt="Firebase Icon">
+                      <img src="../images/tech/sass.png" alt="Sass Icon">
+                    </div>
+                    <div class="tech-row">
+                      <img src="../images/tech/polymer.png" alt="Polymer Icon">
+                      <img src="../images/tech/vue.png" id="vue-icon" alt="Vue JS Icon">
+                    </div>
+                  </template>
+                </dom-if>
+              </paper-dialog>
 
               <p id="location" class="intro-content">
                 <iron-icon icon="ceg-icons:location-on"></iron-icon>
@@ -109,18 +111,23 @@
               </p>
 
               <div id="github">
-                <p id="github-text" class="intro-content">View the source code on Github <a href="https://github.com/michaelgee22/portfolio" target="_blank">here</a></p>
+                <p id="github-text" class="intro-content">View the source code on Github
+                  <a href="https://github.com/michaelgee22/portfolio" target="_blank">here</a>
+                </p>
                 <img id="github-image" src="../../images/tech/github.png" alt="Github Logo">
               </div>
             </div>
-          </div><!-- SECTION 2 DIV END -->
+          </div>
+          <!-- SECTION 2 DIV END -->
 
           <div id="bottom-arrow" on-tap="pageScroll">
             <iron-icon id="bottom-icon" icon="ceg-icons:keyboard-arrow-down"></iron-icon>
           </div>
 
-        </div><!-- JUMBOTRON CONTENT -->
-      </section><!-- JUMBOTRON END -->
+        </div>
+        <!-- JUMBOTRON CONTENT -->
+      </section>
+      <!-- JUMBOTRON END -->
 
       <section id="expertise">
         <h2>My Expertise</h2>
@@ -128,46 +135,68 @@
 
         <div id="skill-list">
           <div class="skill">
-            <iron-image preload fade
-              class="skill-img"
-              src="../images/layout/browser.png"
-              alt="Building Skill Icon">
+            <iron-image preload fade class="skill-img" src="../images/layout/browser.png" alt="Building Skill Icon">
             </iron-image>
             <h3>Developing</h3>
-            <p>With a proficient level knowledge of JavaScript, I use it on both the client and server side of applications using React.js & Node.js along with a strong foundational knowledge of HTML & CSS to build out full stack web applications with a structured and well organized backend API connected to a MongoDB (NoSQL) database with a responsive and elegant user interface. </p>
+            <p>With a proficient level knowledge of JavaScript, I use it on both the client and server side of applications
+              using React.js & Node.js along with a strong foundational knowledge of HTML & CSS to build out full stack web
+              applications with a structured and well organized backend API connected to a MongoDB (NoSQL) database with
+              a responsive and elegant user interface. </p>
           </div>
           <div class="skill">
-            <iron-image preload fade
-              class="skill-img"
-              src="../images/layout/devices.png"
-              alt="UI/UX Skill Icon">
+            <iron-image preload fade class="skill-img" src="../images/layout/devices.png" alt="UI/UX Skill Icon">
             </iron-image>
             <h3>UI/UX</h3>
-            <p>With almost a year of experience with creating React.js components with JSX and HTML/CSS I make it a top priority to make every application fully responsive, accessible, and tested across all platforms. I heavily emphasize an elegant and user-focused UI/UX with an organized component structure used with front end best practices in every application.</p>
+            <p>With almost a year of experience with creating React.js components with JSX and HTML/CSS I make it a top priority
+              to make every application fully responsive, accessible, and tested across all platforms. I heavily emphasize
+              an elegant and user-focused UI/UX with an organized component structure used with front end best practices
+              in every application.</p>
           </div>
           <div class="skill">
-            <iron-image preload fade
-              class="skill-img"
-              src="../images/layout/lightbulb.png"
-              alt="Innovating Skill Icon">
+            <iron-image preload fade class="skill-img" src="../images/layout/lightbulb.png" alt="Innovating Skill Icon">
             </iron-image>
             <h3>Innovating</h3>
-            <p>Having the ability to be creative and problem solve are just as important than your ability to code. I take pride in not only being able to solve existing problems, but planning out strategies to prevent any future problems or bug fixing. I strive to innovate and constantly improve my web development skills to stay ahead of the curve in the industry.</p>
+            <p>Having the ability to be creative and problem solve are just as important than your ability to code. I take pride
+              in not only being able to solve existing problems, but planning out strategies to prevent any future problems
+              or bug fixing. I strive to innovate and constantly improve my web development skills to stay ahead of the curve
+              in the industry.</p>
           </div>
-        </div><!-- SKILL LIST DIV END -->
+        </div>
+        <!-- SKILL LIST DIV END -->
 
-         <div id="icon-reference">
+        <div id="icon-reference">
           <p id="icon-open" on-tap="openDialog">Icon Reference</p>
-         </div>
-         <!-- ICON REFERENCE DIALOG -->
-         <paper-dialog id="icon-openDialog" with-backdrop>
-            <div>Icons made by <a href="http://www.flaticon.com/authors/dimi-kazak" title="Dimi Kazak">Dimi Kazak</a> from <a href="http://www.flaticon.com" title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div>
-            <div>Icons made by <a href="http://www.flaticon.com/authors/vectors-market" title="Vectors Market">Vectors Market</a> from <a href="http://www.flaticon.com" title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div>
-            <div>Icons made by <a href="http://www.freepik.com" title="Freepik">Freepik</a> from <a href="http://www.flaticon.com" title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div>
-            <div>Icons made by <a href="http://www.flaticon.com/authors/roundicons" title="Roundicons">Roundicons</a> from <a href="http://www.flaticon.com" title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div>
+        </div>
+        <!-- ICON REFERENCE DIALOG -->
+        <paper-dialog id="icon-openDialog" with-backdrop>
+          <div>Icons made by
+            <a href="http://www.flaticon.com/authors/dimi-kazak" title="Dimi Kazak">Dimi Kazak</a> from
+            <a href="http://www.flaticon.com" title="Flaticon">www.flaticon.com</a> is licensed by
+            <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0"
+              target="_blank">CC 3.0 BY</a>
+          </div>
+          <div>Icons made by
+            <a href="http://www.flaticon.com/authors/vectors-market" title="Vectors Market">Vectors Market</a> from
+            <a href="http://www.flaticon.com" title="Flaticon">www.flaticon.com</a> is licensed by
+            <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0"
+              target="_blank">CC 3.0 BY</a>
+          </div>
+          <div>Icons made by
+            <a href="http://www.freepik.com" title="Freepik">Freepik</a> from
+            <a href="http://www.flaticon.com" title="Flaticon">www.flaticon.com</a> is licensed by
+            <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0"
+              target="_blank">CC 3.0 BY</a>
+          </div>
+          <div>Icons made by
+            <a href="http://www.flaticon.com/authors/roundicons" title="Roundicons">Roundicons</a> from
+            <a href="http://www.flaticon.com" title="Flaticon">www.flaticon.com</a> is licensed by
+            <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0"
+              target="_blank">CC 3.0 BY</a>
+          </div>
 
-         </paper-dialog>
-      </section><!-- EXPERTISE SECTION END -->
+        </paper-dialog>
+      </section>
+      <!-- EXPERTISE SECTION END -->
 
       <dom-if if="[[!_shouldRenderMobileElement]]">
         <template>
@@ -177,63 +206,33 @@
 
       <section id="projects">
         <h2>Portfolio</h2>
-        <p style="margin-bottom:0;">A majority of my projects can be found on my <a href="https://github.com/michaelgee22" target="_blank">Github</a></p>   
+        <p style="margin-bottom:0;">A majority of my projects can be found on my
+          <a href="https://github.com/michaelgee22" target="_blank">Github</a>
+        </p>
 
         <div id="examples">
-          <div id="first-example" class="example">
-            <div class="example-text">
-              <h3>CEGMAG Solutions Inc.</h3>
-              <p>A family software company that is <strong>currently developing</strong> multiple web-based software application solutions with a focus on building progressive web applications with state of the art features and solutions to save our customer's time and money.</p>
-            </div>
-            <div class="example-img">
-              <iron-image preload fade
-                src="../images/layout/cegmag.png"
-                alt="Cegmag Solutions Preview Image">
-              </iron-image>
-            </div>
-          </div>
+          <template is="dom-repeat" items="[[projects]]">
+            <div class="example">
+              <img class="example-img" src="[[item.image]]" alt="[[item.imageAlt]]">
 
-          <div class="example">
-            <div class="example-text">
-              <h3>Chat-Box</h3>
-              <p>A multi-thread chat application built with web components (Polymer library) and Firebase to authenticate users and give them a fast and functional chat experience that works across all platforms.</p>
+              <div class="example-body">
+                <div class="example-title">[[item.title]]</div>
+                <hr>
+                <div class="example-buttons">
+                  <a class="btn-link" href="[[item.link]]" target="_blank">
+                    <paper-button class="view-btn">View</paper-button>
+                  </a>
+                  <paper-icon-button on-tap="_openCollapse" id="[[item.id]]" icon="ceg-icons:keyboard-arrow-down"></paper-icon-button>
+                </div>
+              </div>
+              <iron-collapse !opened id="[[item.collapseID]]">
+                <div class="collapse-text">[[item.desc]]</div>
+              </iron-collapse>
             </div>
-            <div class="example-img">
-              <iron-image preload fade
-                src="../images/layout/chat-box.png"
-                alt="Chat-Box Preview Image">
-              </iron-image>
-            </div>
-          </div>
-
-          <div class="example">
-            <div class="example-text">
-              <h3>Linkin Park Tribute</h3>
-              <p>A Vue.js project that also uses the Vuetify material design framework along with Firebase to build a full tribute application to my favorite band Linkin Park. I use the Vue components in a way to display all of LP's albums and songs in an efficient and elegant way.</p>
-            </div>
-            <div class="example-img">
-              <iron-image preload fade src="../images/layout/linkin-park.jpg" alt="Linkin Park Tribute Page Preview Image">
-              </iron-image>
-            </div>
-          </div>
-
-          <div id="last-example" class="example">
-            <div class="example-text">
-              <h3>myProjects</h3>
-              <p>myProjects is a web application displaying all my current and past web development projects. It will be built using a combination of most of the individual technologies listed as icons in the header section of the page.</p>
-            </div>
-            <div class="example-img">
-              <iron-image preload fade
-                src="../images/layout/coming-soon.png"
-                alt="Coming Soon">
-              </iron-image>
-            </div>
-          </div>
-
-          <div id="project-links">Links to Projects: <a href="https://chat-box-217e3.firebaseapp.com/" target="_blank">Chat-Box</a> -- <a href="https://linkin-park-tribute.firebaseapp.com/" target="_blank">Linkin Park Tribute</a> -- myProjects (coming soon)</div>
-
-        </div><!-- EXAMPLES DIV END -->
-      </section><!-- MY WORK SECTION END -->
+          </template>
+        </div>
+      </section>
+      <!-- MY WORK SECTION END -->
 
       <dom-if if="[[!_shouldRenderMobileElement]]">
         <template>
@@ -245,7 +244,7 @@
         <h2>Other Resources</h2>
 
         <div id="resume-container">
-          <a href="https://drive.google.com/file/d/11aq3dfTeJMQqf2S_4pNfG9rlEb6-l9ni/view?ths=true" target="_blank">
+          <a href="https://drive.google.com/file/d/1_c5XlaReGkwkzgRngFk6cukfmYB9twY3/view" target="_blank">
             <paper-button class="contact-btn" raised>
               <iron-icon icon="ceg-icons:book"></iron-icon>
               View Resume
@@ -255,13 +254,9 @@
 
         <p>Interested in hiring me or want to discuss a project? Get in touch through any of the various links below!</p>
 
+        <p>Email: michaelgee221@gmail.com</p>
+
         <div id="contact-buttons">
-          <a href="https://drive.google.com/file/d/11aq3dfTeJMQqf2S_4pNfG9rlEb6-l9ni/view?ths=true" target="_blank">
-            <paper-button id="email-btn" class="contact-btn" raised>
-              <iron-icon icon="ceg-icons:email"></iron-icon>
-              Contact
-            </paper-button>
-          </a>
           <a href="https://www.linkedin.com/in/michael-gee/" target="_blank">
             <paper-button id="linkedin-btn" class="contact-btn" raised>
               <iron-icon icon="ceg-icons:linkedin"></iron-icon>
@@ -281,12 +276,13 @@
             </paper-button>
           </a>
         </div>
-      
+
         <paper-button on-tap="pageScroll" id="back-to-top-btn">
           <iron-icon icon="ceg-icons:keyboard-arrow-up"></iron-icon>
         </paper-button>
       </section>
-    </div><!-- CONTAINER DIV END -->
+    </div>
+    <!-- CONTAINER DIV END -->
   </template>
 
   <script>
@@ -297,7 +293,49 @@
       }
 
       static get is() { return 'ceg-app'; }
-      static get properties() { return {
+      static get properties() {
+        return {
+          projects: {
+            type: Array,
+            value: [
+              {
+                image: '../images/layout/cegmag.png',
+                imageAlt: 'CEGMAG Solutions Inc. logo',
+                title: 'CEGMAG Website',
+                link: 'https://website-eeb2b.firebaseapp.com/',
+                id: 'cegmag',
+                collapseID: 'cegmag-collapse',
+                desc: "Worked individually on building the company website built with native JavaScript web components. A fully responsive application focused on performance and clean UI/UX with Material Design included."
+              },
+              {
+                image: '../images/layout/chat-bubble.png',
+                imageAlt: 'Chat Box application',
+                title: 'Chat Box',
+                link: 'https://mgchatbox.com/',
+                id: 'chatbox',
+                collapseID: 'chatbox-collapse',
+                desc: "A multi-thread chat application built with web components (Polymer library) and Firebase to authenticate users and give them a fast and functional chat experience that works across all platforms."
+              },
+              {
+                image: '../images/layout/linkin-park.jpg',
+                imageAlt: 'Linkin Park Logo',
+                title: 'Linkin Park Tribute',
+                link: 'https://linkin-park-tribute.firebaseapp.com/',
+                id: 'lp',
+                collapseID: 'lp-collapse',
+                desc: "A Vue.js project with the Vuetify material design framework along with Firebase to build a tribute application to one of my favorite bands Linkin Park. Simple UI/UX, component organization, and becoming more acquainted with the Vue framework were the main aspects of this project."
+              },
+              {
+                image: '../images/layout/sandbox.jpg',
+                imageAlt: 'Sandbox application image',
+                title: 'Sandbox Applications',
+                link: 'https://github.com/michaelgee22',
+                id: 'sandbox',
+                collapseID: 'sandbox-collapse',
+                desc: "I have become very familiar with the vast JavaScript ecosystem using a majority of the mainstream libraries and frameworks. To really dive in and see what I can do with each, I create sandbox applications using a build-to-learn approach. A lot of these applicaitons can be found on my Github account."
+              }
+            ]
+          },
           //Smaller Screen (Tablets/Small Laptops) - 960px and under
           _shouldRenderSmallScreenElement: {
             computed: '_computeShouldRenderSmallScreenElement(smallScreen)'
@@ -306,7 +344,8 @@
           _shouldRenderMobileElement: {
             computed: '_computeShouldRenderMobileElement(mobileScreen)'
           }
-        }}
+        }
+      }
 
       _computeShouldRenderSmallScreenElement(smallScreen) {
         return smallScreen;
@@ -315,16 +354,29 @@
         return mobileScreen;
       }
 
-      pageScroll(e){
+      pageScroll(e) {
         let scrollDestination;
 
         if (e.currentTarget === this.$['bottom-arrow']) {
           scrollDestination = this.$['expertise'];
-        } else if(e.currentTarget === this.$['back-to-top-btn']) {
+        } else if (e.currentTarget === this.$['back-to-top-btn']) {
           scrollDestination = this.$['container'];
         }
 
-        scrollDestination.scrollIntoView({block: "start", behavior: "smooth"});
+        scrollDestination.scrollIntoView({ block: "start", behavior: "smooth" });
+      }
+
+      _openCollapse(e) {
+        const currentID = e.path[2].id ? e.path[2].id : e.path[0].id,
+          collapseElement = this.shadowRoot.querySelector(`#${currentID}-collapse`),
+          sectionIcon = this.shadowRoot.querySelector(`#${currentID}`);
+
+        if (collapseElement.opened) {
+          sectionIcon.icon = 'ceg-icons:keyboard-arrow-down';
+        } else {
+          sectionIcon.icon = 'ceg-icons:keyboard-arrow-up';
+        }
+        collapseElement.toggle();
       }
 
       openDialog(e) {
